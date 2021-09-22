@@ -51,7 +51,7 @@ public class RemarkCommandParserTest {
         // only index specified, deletes remark
         assertParseSuccess(parser, onlyIndexUserInput, onlyIndexExpectedCommand);
 
-        String indexAndFieldUserInput = INDEX_FIRST_PERSON.getOneBased() +  " " + PREFIX_REMARK + "Some remark";
+        String indexAndFieldUserInput = INDEX_FIRST_PERSON.getOneBased() + " " + PREFIX_REMARK + "Some remark";
         RemarkCommand indexAndFieldExpectedCommand = new RemarkCommand(INDEX_FIRST_PERSON, remark);
         // index and field specified, adds remark
         assertParseSuccess(parser, indexAndFieldUserInput, indexAndFieldExpectedCommand);
