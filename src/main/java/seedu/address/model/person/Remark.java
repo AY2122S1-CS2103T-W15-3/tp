@@ -2,7 +2,7 @@ package seedu.address.model.person;
 
 
 public class Remark {
-    public static final String MESSAGE_CONSTRAINTS = "Remarks can take any values, and it can be blank";
+    public static final String MESSAGE_CONSTRAINTS = "Remarks can take any values";
 
 
     public final String value;
