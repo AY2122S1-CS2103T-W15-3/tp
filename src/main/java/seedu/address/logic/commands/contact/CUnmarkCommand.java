@@ -3,7 +3,6 @@ package seedu.address.logic.commands.contact;
 import static java.util.Objects.requireNonNull;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import seedu.address.commons.core.Messages;
@@ -48,7 +47,6 @@ public class CUnmarkCommand extends Command implements Undoable {
         if (indexesToUnmark.stream().anyMatch(index -> index.getZeroBased() >= lastShownList.size())) {
             throw new CommandException(Messages.MESSAGE_INVALID_CONTACT_DISPLAYED_INDEX);
         }
-        Collections.reverse(indexesToUnmark);
         List<Contact> contactsUnmarked = new ArrayList<>();
         for (Index index : indexesToUnmark) {
             Contact contact = lastShownList.get(index.getZeroBased());
