@@ -3,7 +3,6 @@ package seedu.address.logic.commands.event;
 import static java.util.Objects.requireNonNull;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import seedu.address.commons.core.Messages;
@@ -48,7 +47,6 @@ public class EUnmarkCommand extends Command implements Undoable {
         if (indexesToUnmark.stream().anyMatch(index -> index.getZeroBased() >= lastShownList.size())) {
             throw new CommandException(Messages.MESSAGE_INVALID_EVENT_DISPLAYED_INDEX);
         }
-        Collections.reverse(indexesToUnmark);
         List<Event> eventsUnmarked = new ArrayList<>();
         for (Index index : indexesToUnmark) {
             Event event = lastShownList.get(index.getZeroBased());
