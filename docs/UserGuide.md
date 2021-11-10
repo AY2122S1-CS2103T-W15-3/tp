@@ -210,61 +210,159 @@ This is what you will see when you open SoConnect!
 
    Displays information of the contacts you saved in SoConnect.
 
-   Refer to [Icons in Contact List](#icons-in-contact-list) to learn about the different _fields_ that each icon represents in Contact List.
+   Refer to [Icons](#icons) to learn about the different _fields_ that each icon represents in Contact List.
 
 6. **Event list**
 
    Displays information of the events you saved in SoConnect.
 
-   Refer to [Icons in Event List](#icons-in-event-list) to learn about the different _fields_ that each icon represents in Event List.
+   Refer to [Icons](#icons) to learn about the different _fields_ that each icon represents in Event List.
 
 
 
-### Icons in Contact List
+### Icons
 
-![Contact Card](images/demo-screenshots/contactCard.png)
 You will always find these 2 information of each contact displayed in SoConnect Contact List:
 1. Contact Index
 2. Contact Name
 
-Here are the icons you might see under each contact:
+![Contact Card](images/demo-screenshots/contactCard.png)
 
-Icon | _Field_
---------|------------------
-**![Bookmark Icon](images/demo-screenshots/bookmarkIcon.png)** | Bookmark*
-**![Email Icon](images/demo-screenshots/emailIcon.png)** | Email Address
-**![Phone Number Icon](images/demo-screenshots/phoneNumberIcon.png)** | Phone Number
-**![Address Icon](images/demo-screenshots/addressIcon.png)** | Address
-**![Telegram Icon](images/demo-screenshots/telegramIcon.png)** | Telegram Handle
-**![Website Icon](images/demo-screenshots/websiteIcon.png)** | Links/ Websites
-**![Event Icon](images/demo-screenshots/eventIcon.png)** | Linked Events
-**![Tag Icon](images/demo-screenshots/tagIcon.png)** | Tag
-
-*The bookmark icon is only visible if the contact has been marked.
-_See also: [Marking a contact](#marking-a-contact-cmark)_
-
-
-### Icons in Event List
-
-![Event Card](images/demo-screenshots/eventCard.png)
-You will always find these 2 information of each event displayed in SoConnect Event List:
+Similarly, you will always find these 2 information of each event displayed in SoConnect Event List:
 1. Event Index
 2. Event Name
 
-Here are the icons you might see under each event:
+![Event Card](images/demo-screenshots/eventCard.png)
 
-Icon | _Field_
---------|------------------
-**![Bookmark Icon](images/demo-screenshots/bookmarkIcon.png)** | Bookmark*
-**![Start Time Icon](images/demo-screenshots/startTimeIcon.png)** | Start Time
-**![End Time Icon](images/demo-screenshots/endTimeIcon.png)** | End Time
-**![Website Icon](images/demo-screenshots/websiteIcon.png)** | Links/ Websites
-**![Description Icon](images/demo-screenshots/descriptionIcon.png)** | Description
-**![Contact Icon](images/demo-screenshots/contactsIcon.png)** | Linked Contacts
-**![Tag Icon](images/demo-screenshots/tagIcon.png)** | Tag
+Here are the icons you might see under each contact or event:
 
-*The bookmark icon is only visible if the event has been marked.
-_See also: [Marking an event](#marking-an-event-emark)_
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">Contact icons</th>
+            <th colspan="2">Event icons</th>
+        </tr>
+        <tr>
+            <th>Icon</th>
+            <th><em>Field</em></th>
+            <th>Icon</th>
+            <th><em>Field</em></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <img alt="Bookmark Icon" src="images/demo-screenshots/bookmarkIcon.png" class="icon-image" />
+            </td>
+            <td>
+                Bookmark*
+            </td>
+            <td>
+                <img alt="Bookmark Icon" src="images/demo-screenshots/bookmarkIcon.png" class="icon-image" />
+            </td>
+            <td>
+                Bookmark*
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img alt="Email Icon" src="images/demo-screenshots/emailIcon.png" class="icon-image" />
+            </td>
+            <td>
+                Email Address
+            </td>
+            <td>
+                <img alt="Start Time Icon" src="images/demo-screenshots/startTimeIcon.png" class="icon-image" />
+            </td>
+            <td>
+                Start Time
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img alt="Phone Number Icon" src="images/demo-screenshots/phoneNumberIcon.png" class="icon-image" />
+            </td>
+            <td>
+                Phone Number
+            </td>
+            <td>
+                <img alt="End Time Icon" src="images/demo-screenshots/endTimeIcon.png" class="icon-image" />
+            </td>
+            <td>
+                End Time
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img alt="Address Icon" src="images/demo-screenshots/addressIcon.png" class="icon-image" />
+            </td>
+            <td>
+                Address
+            </td>
+            <td>
+                <img alt="Website Icon" src="images/demo-screenshots/websiteIcon.png" class="icon-image" />
+            </td>
+            <td>
+                Links/ Websites
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img alt="Telegram Icon" src="images/demo-screenshots/telegramIcon.png" class="icon-image" />
+            </td>
+            <td>
+                Telegram Handle
+            </td>
+            <td>
+                <img alt="Description Icon" src="images/demo-screenshots/descriptionIcon.png" class="icon-image" />
+            </td>
+            <td>
+                Description
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img alt="Website Icon" src="images/demo-screenshots/websiteIcon.png" class="icon-image" />
+            </td>
+            <td>
+                Links/ Websites
+            </td>
+            <td>
+                <img alt="Contact Icon" src="images/demo-screenshots/contactsIcon.png" class="icon-image" />
+            </td>
+            <td>
+                Linked Contacts
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img alt="Event Icon" src="images/demo-screenshots/eventIcon.png" class="icon-image" />
+            </td>
+            <td>
+                Linked Events
+            </td>
+            <td>
+                <img alt="Tag Icon" src="images/demo-screenshots/tagIcon.png" class="icon-image" />
+            </td>
+            <td>
+                Tag
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img alt="Tag Icon" src="images/demo-screenshots/tagIcon.png" class="icon-image" />
+            </td>
+            <td>
+                Tag
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+*The bookmark icon is only visible if the contact or event has been marked.
+_See also: [Marking a contact](#marking-a-contact-cmark) and [Marking an event](#marking-an-event-emark)_
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -474,7 +572,7 @@ Input | Expected Output
 `cmark 2` | Marks the second contact of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should see `Bernice Yu` **pinned to the top** of your contact list with the **Bookmark Icon**: ![Mark Contact](images/demo-screenshots/cmarkEx1.png)
 `cmark 4 5` | Marks the fourth and fifth contacts of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked contact: Irfan Ibrahim; Email: irfan@example.com; Address: Blk 47 Tampines Street 20, #17-35; Telegram: irfanx; Tags: [classmates] Marked contact: David Li; Email: lidavid@comp.nus.edu.sg; Address: COM1-B1-0931; Telegram: lidavid; Tags: [professor][CS2103T]` <br><br> You should see `Irfan Ibrahim` and `David Li` **pinned to the top** of your contact list in that order with the **Bookmark Icon**: ![Mark Contact](images/demo-screenshots/cmarkEx2.png)
 
-_See also: [Unmarking a contact](#unmark-a-contact-cunmark)_
+_See also: [Unmarking a contact](#unmarking-a-contact-cunmark)_
 
 
 #### Unmarking a contact: `cunmark`
