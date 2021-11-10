@@ -15,6 +15,7 @@ the benefits of a _Graphical User Interface (GUI)_. If you can type fast, managi
 This user guide will help you to familiarise yourself with your SoConnect quickly and teach you the
 full range of features it offers.
 
+<h2>Table of Contents</h2>
 
 * Table of Contents
 {:toc}
@@ -71,7 +72,7 @@ You may view the entire list of _commands_ that you can type in SoConnect [here]
   e.g. in `cadd n/NAME`, `NAME` is a _parameter_ that can be used as `cadd n/John Doe`.
 
 * _Fields_ in **square brackets** are **optional**.<br>
-  e.g `n/NAME [t/TAG]` can be used as `n/John Doe t/friend` or as `n/John Doe`.
+  e.g. `n/NAME [t/TAG]` can be used as `n/John Doe t/friend` or as `n/John Doe`.
 
 * _Fields_ with `…`​ after them can be used multiple times including zero times.<br>
   e.g. `[t/TAG]…​` can be used as ` ` (i.e. 0 times), `t/friend`, `t/friend t/family`, etc.
@@ -118,7 +119,7 @@ SoConnect will tell you that the _Command Format_ is invalid.
 --------------------------------------------------------------------------------------------------------------------
 ## Quick start
 
-1. Ensure you have [Java 11](https://www.oracle.com/java/technologies/downloads/) or above installed on your computer.
+1. Ensure you have [Java 11](https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A) or above installed on your computer.
 
    <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 
@@ -292,7 +293,7 @@ This section details all the features and _commands_ available in SoConnect that
 * [Finding contacts](#finding-contacts-cfind)
 * [Listing all contacts](#listing-all-contacts-clist)
 * [Marking a contact](#marking-a-contact-cmark)
-* [Unmarking a contact](#removing-mark-of-a-contact-cunmark)
+* [Unmarking a contact](#unmarking-a-contact-cunmark)
 * [Viewing a contact](#viewing-a-contact-cview)
 
 
@@ -457,7 +458,7 @@ Marks the specified contact(s).
 **Format:** `cmark INDEX [INDEX]...`
 
 * Marks the contact at `INDEX` and **pins it at the top** of the contact list.
-* You can specify more than one `INDEX`, e.g `cmark 1 2`, the order in which the marked contacts appear will be in reverse order to the order you specify their corresponding indexes.
+* You can specify more than one `INDEX`, e.g. `cmark 1 2`, the order in which the marked contacts appear will be in reverse order to the order you specify their corresponding indexes.
 * `INDEX` refers to the index number shown in the **currently displayed** contact list.
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
@@ -473,17 +474,17 @@ Input | Expected Output
 `cmark 2` | Marks the second contact of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should see `Bernice Yu` **pinned to the top** of your contact list with the **Bookmark Icon**: ![Mark Contact](images/demo-screenshots/cmarkEx1.png)
 `cmark 4 5` | Marks the fourth and fifth contacts of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked contact: Irfan Ibrahim; Email: irfan@example.com; Address: Blk 47 Tampines Street 20, #17-35; Telegram: irfanx; Tags: [classmates] Marked contact: David Li; Email: lidavid@comp.nus.edu.sg; Address: COM1-B1-0931; Telegram: lidavid; Tags: [professor][CS2103T]` <br><br> You should see `Irfan Ibrahim` and `David Li` **pinned to the top** of your contact list in that order with the **Bookmark Icon**: ![Mark Contact](images/demo-screenshots/cmarkEx2.png)
 
-_See also: [Unmarking a contact](#removing-mark-of-a-contact-cunmark)_
+_See also: [Unmarking a contact](#unmark-a-contact-cunmark)_
 
 
-#### Removing mark of a contact: `cunmark`
+#### Unmarking a contact: `cunmark`
 
 Unmarks the specified contact(s).
 
 **Format:** `cunmark INDEX [INDEX]...`
 
 * Unmarks the contact at `INDEX1`.
-* You may unmark **more than one contact at a time** by specifying multiple indexes, eg `cunmark 1 2`, the indexes in which the contacts appear will be **in the order in which** you specify them
+* You may unmark **more than one contact at a time** by specifying multiple indexes, e.g. `cunmark 1 2`, the indexes in which the contacts appear will be **in the order in which** you specify them
 * `INDEX`  refers to the index number shown in the displayed contact list.
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
@@ -538,7 +539,7 @@ This section details all the features and _commands_ available in SoConnect that
 * [Linking an event to contacts](#linking-an-event-to-contacts-elink)
 * [Listing all events](#listing-all-events-elist)
 * [Marking an event](#marking-an-event-emark)
-* [Removing mark of an event](#removing-mark-of-an-event-eunmark)
+* [Unmarking an event](#unmarking-an-event-eunmark)
 * [Sorting events](#sorting-events-esort)
 * [Unlinking an event from contacts](#unlinking-an-event-from-contacts-eunlink)
 * [Viewing an event](#viewing-an-event-eview)
@@ -753,17 +754,17 @@ Input | Expected Output
 --------|------------------
 `emark 2` | Marks the second event of **currently displayed** event list in SoConnect. <br><br> _The expected display is similar to [marking a contact](#marking-a-contact-cmark)_
 
-_See Also: [Removing mark of an event](#removing-mark-of-an-event-eunmark)_
+_See Also: [Unmarking an event](#unmarking-an-event-eunmark)_
 
 
-#### Removing mark of an event: `eunmark`
+#### Unmarking an event: `eunmark`
 
 Unmarks the specified event(s).
 
 **Format:** `eunmark INDEX [INDEX]...`
 
 * Unmarks the event at `INDEX`.
-* You may unmark **more than one event** by specifying multiple indexes, eg `eunmark 1 2`, the indexes in which the events appear will be **in the order in which** you specify them.
+* You may unmark **more than one event** by specifying multiple indexes, e.g. `eunmark 1 2`, the indexes in which the events appear will be **in the order in which** you specify them.
 * `INDEX` refers to the index number shown in the displayed event list.
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
@@ -777,7 +778,7 @@ Unmarks the specified event(s).
 
 Input | Expected Output
 --------|------------------
-`eunmark 2` | Unmarks the second event of **currently displayed** event list in SoConnect.<br><br> _The expected display is similar to [Removing mark of a contact](#removing-mark-of-a-contact-cunmark)_
+`eunmark 2` | Unmarks the second event of **currently displayed** event list in SoConnect.<br><br> _The expected display is similar to [Unmarking a contact](#unmarking-a-contact-cunmark)_
 `eunmark 2 4` | Unmarks the second and fourth event in SoConnect.
 
 _See Also: [Marking an event](#marking-an-event-emark)_
@@ -839,11 +840,11 @@ Input | Expected Output
 ### General
 
 This section details all the other features and _commands_ available in SoConnect that can enhance your SoConnect experience:
-* [Calendar Window](#opening-the-calendar-calendar)
+* [Opening the calendar](#opening-the-calendar-calendar)
 * [Exiting SoConnect](#exiting-soconnect-exit)
-* [Help Window](#viewing-help-help)
-* [Redo a _command_](#redoing-a-command-redo)
-* [Undo a _command_](#undoing-a-command-undo)
+* [Viewing help](#viewing-help-help)
+* [Redoing a _command_](#redoing-a-command-redo)
+* [Undoing a _command_](#undoing-a-command-undo)
 
 #### Opening the calendar: `calendar`
 
@@ -917,7 +918,7 @@ Input | Expected Output
 --------|------------------
 [`edelete 1`](#deleting-an-event-edelete) followed by [`undo`](#undoing-a-command-undo) then `redo` | First **restores the deleted event** in the event list. <br>Then `redo` will **delete the same event again**.
 
-_See Also: [Undo a command](#undoing-a-command-undo)_
+_See Also: [Undoing a command](#undoing-a-command-undo)_
 
 
 #### Undoing a _command_: `undo`
@@ -932,7 +933,7 @@ Input | Expected Output
 --------|------------------
 [`cadd n/John Doe e/john@gmail.com`](#adding-a-contact-cadd) followed by `undo` | **Removes the added** contact from the contact list.
 
-_See Also: [Redo a command](#redoing-a-command-redo)_
+_See Also: [Redoing a command](#redoing-a-command-redo)_
 
 <div markdown="span" class="alert alert-info">:information_source: **Note:**
 
@@ -1030,7 +1031,7 @@ For instance, you can link your *professor* to the lecture.
 * If you are still unable to open the file,
   [check your Java version](https://www.java.com/en/download/help/version_manual.html)
   again and make sure it is version 11.
-* [Download Java 11](https://www.oracle.com/java/technologies/downloads/) if you have not done so.
+* [Download Java 11](https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A) if you have not done so.
 </div>
 
 
@@ -1071,31 +1072,31 @@ _Prefix_ | _Parameter_ Type
 
 Action | Format, Examples
 --------|------------------
-**[Add](#adding-a-contact-cadd)** | `cadd n/NAME e/EMAIL [p/PHONE_NUMBER] [a/ADDRESS] [th/TELEGRAM_HANDLE] [z/ZOOM] [t/TAG]…​` <br> e.g., `cadd n/Alex Doe e/e0123456@u.nus.edu a/COM1 #99-99 th/johnDoe99 t/Professor`
+**[Add](#adding-a-contact-cadd)** | `cadd n/NAME e/EMAIL [p/PHONE_NUMBER] [a/ADDRESS] [th/TELEGRAM_HANDLE] [z/ZOOM] [t/TAG]…​` <br> e.g. `cadd n/Alex Doe e/e0123456@u.nus.edu a/COM1 #99-99 th/johnDoe99 t/Professor`
 **[Clear](#clearing-all-contacts-cclear)** | `cclear`
 **[Delete](#deleting-a-contact-cdelete)** | `cdelete INDEX1[-INDEX2]`<br> e.g. `cdelete 3` <br> e.g. `cdelete 1-5`
-**[Edit](#editing-a-contact-cedit)** | `cedit INDEX [n/NAME] [e/EMAIL] [p/PHONE] [a/ADDRESS] [th/TELEGRAM_HANDLE] [z/ZOOM] [dt/TAG_DELETED]…​ [t/TAG_ADDED]…​​`<br> e.g.`cedit 2 p/91234567 e/agentX@thehightable.com` <br> e.g. `cedit 1 n/Betsy Crower dt/*`
+**[Edit](#editing-a-contact-cedit)** | `cedit INDEX [n/NAME] [e/EMAIL] [p/PHONE] [a/ADDRESS] [th/TELEGRAM_HANDLE] [z/ZOOM] [dt/TAG_DELETED]…​ [t/TAG_ADDED]…​​`<br> e.g. `cedit 2 p/91234567 e/agentX@thehightable.com` <br> e.g. `cedit 1 n/Betsy Crower dt/*`
 **[Find](#finding-contacts-cfind)** | `cfind [KEYWORD]… [e/KEYWORD…] [p/KEYWORD…] [a/KEYWORD…] [th/KEYWORD…] [z/KEYWORD…] [t/KEYWORD…]`<br> e.g. `cfind alex david`
 **[List](#listing-all-contacts-clist)** | `clist [e/] [p/] [a/] [th/] [z/] [t/]` <br> e.g. `clist` <br> e.g. `clist e/ p/`
 **[Mark](#marking-a-contact-cmark)** | `cmark INDEX`<br> e.g. `cmark 2`
-**[Remove mark](#removing-mark-of-a-contact-cunmark)** | `cunmark INDEX [INDEX]…`<br> e.g. `cunmark 2` <br> e.g. `cunmark 2 3`
+**[Unmark](#unmarking-a-contact-cunmark)** | `cunmark INDEX [INDEX]…`<br> e.g. `cunmark 2` <br> e.g. `cunmark 2 3`
 **[View](#viewing-a-contact-cview)** | `cview INDEX`<br> e.g. `cview 2`
 
 **Event Management**
 
 Action | Format, Examples
 --------|------------------
-**[Add](#adding-an-event-eadd)** | `eadd n/NAME at/START_TIME [end/END_TIME] [d/DESCRIPTION] [a/ADDRESS] [z/ZOOM] [t/TAG]…​ ` <br> e.g., `eadd n/Summer Party at/12-12-2021 15:12 a/123, Clementi Rd, 1234665 t/fun`
+**[Add](#adding-an-event-eadd)** | `eadd n/NAME at/START_TIME [end/END_TIME] [d/DESCRIPTION] [a/ADDRESS] [z/ZOOM] [t/TAG]…​ ` <br> e.g. `eadd n/Summer Party at/12-12-2021 15:12 a/123, Clementi Rd, 1234665 t/fun`
 **[Clear](#clearing-all-events-eclear)** | `eclear`
-**[Delete](#deleting-an-event-edelete)** | `edelete INDEX1[-INDEX2]`<br> e.g., `edelete 3` <br> e.g., `edelete 1-5`
-**[Edit](#editing-an-event-eedit)** | `eedit INDEX [n/NAME] [at/START_TIME] [end/END_TIME] [d/DESCRIPTION] [a/ADDRESS] [z/ZOOM] [dt/TAG_DELETED]…​ [t/TAG_ADDED]…​`<br> e.g.,`eedit 2 n/CS2103T Exam dt/CCA t/Hard` <br> e.g., `eedit 3 dt/*`
-**[Find](#finding-events-efind)** | `efind [KEYWORDS]… [at/KEYWORD…] [end/KEYWORD…] [d/KEYWORD…] [a/KEYWORD…] [z/KEYWORD…] [t/KEYWORD…]` <br> e.g., `efind meet` <br> e.g., `efind t/CS2103T Intern`
+**[Delete](#deleting-an-event-edelete)** | `edelete INDEX1[-INDEX2]`<br> e.g. `edelete 3` <br> e.g. `edelete 1-5`
+**[Edit](#editing-an-event-eedit)** | `eedit INDEX [n/NAME] [at/START_TIME] [end/END_TIME] [d/DESCRIPTION] [a/ADDRESS] [z/ZOOM] [dt/TAG_DELETED]…​ [t/TAG_ADDED]…​`<br> e.g. `eedit 2 n/CS2103T Exam dt/CCA t/Hard` <br> e.g. `eedit 3 dt/*`
+**[Find](#finding-events-efind)** | `efind [KEYWORDS]… [at/KEYWORD…] [end/KEYWORD…] [d/KEYWORD…] [a/KEYWORD…] [z/KEYWORD…] [t/KEYWORD…]` <br> e.g. `efind meet` <br> e.g. `efind t/CS2103T Intern`
 **[Link](#linking-an-event-to-contacts-elink)** | `elink EVENT_INDEX c/CONTACT_INDEX [c/CONTACT_INDEX]...`<br> `elink 2 c/1 c/2`
-**[List](#listing-all-events-elist)** | `elist [at/] [end/] [d/] [a/] [z/] [t/]` <br> e.g., `elist` <br> e.g., `elist d/ at/`
+**[List](#listing-all-events-elist)** | `elist [at/] [end/] [d/] [a/] [z/] [t/]` <br> e.g. `elist` <br> e.g. `elist d/ at/`
 **[Mark](#marking-an-event-emark)** | `emark INDEX`<br> e.g. `emark 2`
-**[Remove mark](#removing-mark-of-an-event-eunmark)** | `eunmark INDEX [INDEX]…`<br> e.g. `eunmark 2` <br> e.g. `eunmark 2 4`
 **[Sort](#sorting-events-esort)** | `esort`
-**[Unlink](#unlinking-an-event-from-contacts-eunlink)** | `eunlink EVENT_INDEX c/CONTACT_INDEX [c/CONTACT_INDEX]...`<br> e.g., `eunlink 2 c/1` <br> e.g., `eunlink 3 c/*`
+**[Unlink](#unlinking-an-event-from-contacts-eunlink)** | `eunlink EVENT_INDEX c/CONTACT_INDEX [c/CONTACT_INDEX]...`<br> e.g. `eunlink 2 c/1` <br> e.g. `eunlink 3 c/*`
+**[Unmark](#unmarking-an-event-eunmark)** | `eunmark INDEX [INDEX]…`<br> e.g. `eunmark 2` <br> e.g. `eunmark 2 4`
 **[View](#viewing-an-event-eview)** | `eview INDEX`<br> e.g. `eview 1`
 
 **General**
