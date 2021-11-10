@@ -300,10 +300,10 @@ Here are the icons you might see under each contact or event:
                 Address
             </td>
             <td>
-                <img alt="Website Icon" src="images/demo-screenshots/websiteIcon.png" class="icon-image" />
+                <img alt="Address Icon" src="images/demo-screenshots/addressIcon.png" class="icon-image" />
             </td>
             <td>
-                Links/ Websites
+                Address
             </td>
         </tr>
         <tr>
@@ -328,10 +328,10 @@ Here are the icons you might see under each contact or event:
                 Links/ Websites
             </td>
             <td>
-                <img alt="Contact Icon" src="images/demo-screenshots/contactsIcon.png" class="icon-image" />
+                <img alt="Website Icon" src="images/demo-screenshots/websiteIcon.png" class="icon-image" />
             </td>
             <td>
-                Linked Contacts
+                Links/ Websites
             </td>
         </tr>
         <tr>
@@ -342,10 +342,10 @@ Here are the icons you might see under each contact or event:
                 Linked Events
             </td>
             <td>
-                <img alt="Tag Icon" src="images/demo-screenshots/tagIcon.png" class="icon-image" />
+                <img alt="Contact Icon" src="images/demo-screenshots/contactsIcon.png" class="icon-image" />
             </td>
             <td>
-                Tag
+                Linked Contacts
             </td>
         </tr>
         <tr>
@@ -355,8 +355,12 @@ Here are the icons you might see under each contact or event:
             <td>
                 Tag
             </td>
-            <td></td>
-            <td></td>
+            <td>
+                <img alt="Tag Icon" src="images/demo-screenshots/tagIcon.png" class="icon-image" />
+            </td>
+            <td>
+                Tag
+            </td>
         </tr>
     </tbody>
 </table>
