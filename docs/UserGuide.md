@@ -149,7 +149,7 @@ SoConnect will tell you that the _Command Format_ is invalid.
    overview of different components in SoConnect.
     </div>
 
-   For example, typing `help` and **pressing Enter** will open the [help window](#help-window-help).<br>
+   For example, typing `help` and **pressing Enter** will open the [help window](#viewing-help-help).<br>
    Here are some example _commands_ you can try:
 
     * `elist`: [Lists all events](#listing-all-events-elist).
@@ -185,14 +185,14 @@ This is what you will see when you open SoConnect!
    ![File Tab](images/demo-screenshots/fileTab.png)
 
     <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
-    Click the following links to see how to [exit SoConnect](#exiting-soconnect-exit) and [open the calendar](#calendar-window-calendar) using _commands_.
+    Click the following links to see how to [exit SoConnect](#exiting-soconnect-exit) and [open the calendar](#opening-the-calendar-calendar) using _commands_.
     </div> <br>
 
    Upon clicking `Help`, you can choose to open the **Help Window** of SoConnect.
    ![Help Tab](images/demo-screenshots/helpTab.png)
 
     <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
-   Check out how to open [the help window](#help-window-help) using _commands_.
+   Check out how to open [the help window](#viewing-help-help) using _commands_.
     </div>
 
 2. **_Command_ Box**
@@ -644,7 +644,7 @@ Input | Expected Output
 
 
 
-#### Finding Events: `efind`
+#### Finding events: `efind`
 
 Finds all events that contain any of the given keywords based on your search type.
 
@@ -839,13 +839,13 @@ Input | Expected Output
 ### General
 
 This section details all the other features and _commands_ available in SoConnect that can enhance your SoConnect experience:
-* [Calendar Window](#calendar-window-calendar)
+* [Calendar Window](#opening-the-calendar-calendar)
 * [Exiting SoConnect](#exiting-soconnect-exit)
-* [Help Window](#help-window-help)
-* [Redo a _command_](#redo-a-command-redo)
-* [Undo a _command_](#undo-a-command-undo)
+* [Help Window](#viewing-help-help)
+* [Redo a _command_](#redoing-a-command-redo)
+* [Undo a _command_](#undoing-a-command-undo)
 
-#### Calendar Window: `calendar`
+#### Opening the calendar: `calendar`
 
 Shows a calendar of all the events.
 
@@ -867,7 +867,7 @@ Shows a calendar of all the events.
 
 <div markdown="span" class="alert alert-info">:information_source: **Note:**
 
-[Undo](#undo-a-command-undo) and [redo](#redo-a-command-redo) will not change the state of the calendar.
+[Undo](#undoing-a-command-undo) and [redo](#redoing-a-command-redo) will not change the state of the calendar.
 You should close the calendar window before performing any undo or redo operations.
 </div>
 
@@ -891,7 +891,7 @@ Alternatively, you can exit SoConnect using the top menu bar via `File -> Exit`.
 </div>
 
 
-#### Help Window: `help`
+#### Viewing help: `help`
 
 Displays a summary of all _commands_ in SoConnect User Guide.
 
@@ -905,7 +905,7 @@ Alternatively, you can view the help window using the top menu bar via `Help -> 
 </div>
 
 
-#### Redo a _command_: `redo`
+#### Redoing a _command_: `redo`
 
 Restores SoConnect to a previously undone state from its history.
 
@@ -915,12 +915,12 @@ Restores SoConnect to a previously undone state from its history.
 
 Input | Expected Output
 --------|------------------
-[`edelete 1`](#deleting-an-event-edelete) followed by [`undo`](#undo-a-command-undo) then `redo` | First **restores the deleted event** in the event list. <br>Then `redo` will **delete the same event again**.
+[`edelete 1`](#deleting-an-event-edelete) followed by [`undo`](#undoing-a-command-undo) then `redo` | First **restores the deleted event** in the event list. <br>Then `redo` will **delete the same event again**.
 
-_See Also: [Undo a command](#undo-a-command-undo)_
+_See Also: [Undo a command](#undoing-a-command-undo)_
 
 
-#### Undo a _command_: `undo`
+#### Undoing a _command_: `undo`
 
 Restores SoConnect to its previous state from its history.
 
@@ -932,11 +932,11 @@ Input | Expected Output
 --------|------------------
 [`cadd n/John Doe e/john@gmail.com`](#adding-a-contact-cadd) followed by `undo` | **Removes the added** contact from the contact list.
 
-_See Also: [Redo a command](#redo-a-command-redo)_
+_See Also: [Redo a command](#redoing-a-command-redo)_
 
 <div markdown="span" class="alert alert-info">:information_source: **Note:**
 
-[Undo](#undo-a-command-undo) and [redo](#redo-a-command-redo) will only work for _commands_ listed in the
+[Undo](#undoing-a-command-undo) and [redo](#redoing-a-command-redo) will only work for _commands_ listed in the
 [Contact Management](#contact-management) and [Event Management](#event-management) features section.
 
 _Commands_ listed in the [General](#general) section are not undoable.
@@ -1102,11 +1102,11 @@ Action | Format, Examples
 
 Action | Format, Examples
 --------|------------------
-**[Calendar](#calendar-window-calendar)** | `calendar`
+**[Calendar](#opening-the-calendar-calendar)** | `calendar`
 **[Exit](#exiting-soconnect-exit)** | `exit`
-**[Help](#help-window-help)** | `help`
-**[Redo](#redo-a-command-redo)** | `redo`
-**[Undo](#undo-a-command-undo)** | `undo`
+**[Help](#viewing-help-help)** | `help`
+**[Redo](#redoing-a-command-redo)** | `redo`
+**[Undo](#undoing-a-command-undo)** | `undo`
 
 ________________________________________________________________________________________________________________
 
