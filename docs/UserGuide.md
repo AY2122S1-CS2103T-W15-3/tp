@@ -239,14 +239,14 @@ Here are the icons you might see under each contact or event:
 <table>
     <thead>
         <tr>
-            <th colspan="2">Contact icons</th>
-            <th colspan="2">Event icons</th>
+            <th colspan="2" class="contact-heading">Contact icons</th>
+            <th colspan="2" class="event-heading">Event icons</th>
         </tr>
         <tr>
-            <th>Icon</th>
-            <th><em>Field</em></th>
-            <th>Icon</th>
-            <th><em>Field</em></th>
+            <th class="contact-heading">Icon</th>
+            <th class="contact-heading"><em>Field</em></th>
+            <th class="event-heading">Icon</th>
+            <th class="event-heading"><em>Field</em></th>
         </tr>
     </thead>
     <tbody>
@@ -1136,7 +1136,7 @@ For instance, you can link your *professor* to the lecture.
 --------------------------------------------------------------------------------------------------------------------
 ## List of _Prefixes_
 
-**Contact Management**
+<strong class="contact-heading">Contact Management</strong>
 
 _Prefix_ | _Parameter_ Type
 --------|------------------
@@ -1149,7 +1149,7 @@ _Prefix_ | _Parameter_ Type
 **`th/`** | Telegram Handle
 **`z/`** | Links/ Websites
 
-**Event Management**
+<strong class="event-heading">Event Management</strong>
 
 _Prefix_ | _Parameter_ Type
 --------|------------------
@@ -1166,7 +1166,7 @@ _Prefix_ | _Parameter_ Type
 
 ## _Command_ Summary
 
-**Contact Management**
+<strong class="contact-heading">Contact Management</strong>
 
 Action | Format, Examples
 --------|------------------
@@ -1180,7 +1180,7 @@ Action | Format, Examples
 **[Unmark](#unmarking-a-contact-cunmark)** | `cunmark INDEX [INDEX]…`<br> e.g. `cunmark 2` <br> e.g. `cunmark 2 3`
 **[View](#viewing-a-contact-cview)** | `cview INDEX`<br> e.g. `cview 2`
 
-**Event Management**
+<strong class="event-heading">Event Management</strong>
 
 Action | Format, Examples
 --------|------------------
@@ -1197,7 +1197,7 @@ Action | Format, Examples
 **[Unmark](#unmarking-an-event-eunmark)** | `eunmark INDEX [INDEX]…`<br> e.g. `eunmark 2` <br> e.g. `eunmark 2 4`
 **[View](#viewing-an-event-eview)** | `eview INDEX`<br> e.g. `eview 1`
 
-**General**
+<strong class="general-heading">General</strong>
 
 Action | Format, Examples
 --------|------------------

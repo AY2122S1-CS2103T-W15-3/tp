@@ -6,6 +6,10 @@
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
 
+$contact-color-heading: #ffb300;
+$event-color-heading: #0d02e0;
+$general-color-heading: #c2108c;
+
 .icon {
     height: 21px;
     width: 21px
@@ -13,4 +17,23 @@
 
 .icon-image {
     width: 3rem;
+}
+
+.contact-heading, #contact-management , #adding-a-contact-cadd, #clearing-all-contacts-cclear,
+#deleting-a-contact-cdelete, #editing-a-contact-cedit, #finding-contacts-cfind, #listing-all-contacts-clist,
+#marking-a-contact-cmark, #unmarking-a-contact-cunmark, #viewing-a-contact-cview {
+    color: $contact-color-heading;
+}
+
+.event-heading, #event-management, #adding-an-event-eadd, #clearing-all-events-eclear,
+#deleting-an-event-edelete, #editing-an-event-eedit, #finding-events-efind,
+#linking-an-event-to-contacts-elink, #listing-all-events-elist, #marking-an-event-emark,
+#unmarking-an-event-eunmark, #sorting-events-esort, #unlinking-an-event-from-contacts-eunlink,
+#viewing-an-event-eview {
+    color: $event-color-heading;
+}
+
+.general-heading, #general, #opening-the-calendar-calendar, #exiting-soconnect-exit, #viewing-help-help,
+#redoing-a-command-redo, #undoing-a-command-undo {
+    color: $general-color-heading;
 }
