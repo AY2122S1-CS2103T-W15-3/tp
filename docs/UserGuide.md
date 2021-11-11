@@ -32,7 +32,7 @@ Before we jump into learning the [features](#features), here is a quick overview
 
 ### How to read _commands_ in SoConnect
 
-Before you learn the different _commands_ in [features](#features), lets learn about what makes up a _command_.
+Before you learn the different _commands_ in [features](#features), let's learn about what makes up a _command_.
 
 You will see _commands_ throughout this User Guide. Each _command_ has its own [_Command Format_](#command-summary).
 
@@ -168,13 +168,13 @@ Follow this simple 5 step instructions to **set up** SoConnect on your computer.
 
 _See also: [What happens if my command is invalid](#what-happens-if-my-command-is-invalid)_
 
-With everything set up and working, lets understand the SoConnect [display](#overview-of-soconnect).
+With everything set up and working, let's understand the SoConnect [display](#overview-of-soconnect).
 
 ---------------------------------------------------------------------------------------------------------------
 
 ## Overview of SoConnect
 
-Just before you learn the [features](#features) of SoConnect, lets look at what makes up the SoConnect display.
+Just before you learn the [features](#features) of SoConnect, let's look at what makes up the SoConnect display.
 
 ![Labelled SoConnect](images/demo-screenshots/labelledSoconnectOverview.png)
 
@@ -392,7 +392,7 @@ For **each** feature, you are provided with:
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
-If you are just <u>starting off</u>, we recommand that you learn the **basic** features in each section first.<br>
+If you are just <u>starting off</u>, we recommend that you learn the **basic** features in each section first.<br>
 If you are <u>feeling adventurous</u>, we welcome you to learn the more **advanced** features SoConnect has to offer.
 </div>
 
@@ -419,7 +419,7 @@ This section details all the features and _commands_ available in SoConnect that
 
 #### Adding a contact: `cadd`
 
-At the start of every semester, you may need to take many new modules. You can use _command_ `cadd` to add the contacts of `Jon Cheng`, your CS2103T TA.
+At the start of every semester, you may need to take many new modules. You can use _command_ `cadd` to add the contacts of your Professors and TAs.
 
 **Format:** `cadd n/NAME e/EMAIL [p/PHONE_NUMBER] [a/ADDRESS] [th/TELEGRAM_HANDLE] [z/ZOOM] [t/TAG]…`
 
@@ -442,7 +442,7 @@ Input | Expected Output
 
 #### Deleting a contact: `cdelete`
 
-At the end of the semester, you may no longer need to contact your TA `Bernice Yu`. You can use `cdelete` to delete `Bernice Yu`'s contact.
+You can use `cdelete` to delete a contact.
 
 **Format:** `cdelete INDEX1[-INDEX2]`
 
@@ -468,7 +468,7 @@ Input | Expected Output
 
 #### Editing a contact: `cedit`
 
-Your CS2103T project group mate `Bernice Yu` recently changed her email address. You can use `cedit` to update her contact details in SoConnect.  
+You can use `cedit` to edit a contact's information.  
 
 **Format:** `cedit INDEX [n/NAME] [e/EMAIL] [p/PHONE] [a/ADDRESS] [th/TELEGRAM_HANDLE] [z/ZOOM] [dt/TAG_DELETED]… [t/TAG_ADDED]… `
 
@@ -499,7 +499,7 @@ Input | Expected Output
 
 #### Finding contacts: `cfind`
 
-You plan to join a hackathon with your friends, you can use `cfind` to find which of your contacts have nus email so that you can forward them the invitation link via nus email.  
+You can use `cfind` to search for specific contact(s).
 
 **Format:** `cfind [KEYWORD]… [e/KEYWORD…] [p/KEYWORD…] [a/KEYWORD…] [th/KEYWORD…] [z/KEYWORD…] [t/KEYWORD…]`
 
@@ -538,7 +538,7 @@ Input | Expected Output
 
 #### Listing all contacts: `clist`
 
-You want to create a telegram group for your CS2101 OP1 presentation. You can use `clist` to list out the telegram handles of your group mates so that you can add them to the group. 
+You can use `clist` to list all contacts.
 
 **Format:** `clist [e/] [p/] [a/] [th/] [z/] [t/]`
 
@@ -565,7 +565,7 @@ Input | Expected Output
 
 #### Clearing all contacts: `cclear`
 
-You have completed your summer internship and you wish to remove all the contacts from the internship. You can use `clear` to remove all the contacts from your internship.
+You can use `cclear` to clear all contacts.
 
 **Format:** `cclear`
 
@@ -577,7 +577,7 @@ This **will not change the events** saved in SoConnect.
 
 #### Viewing a contact: `cview`
 
-You are going over to your friend `Bernice Yu`'s house to discuss your orbital project, you can use `cview` to display her address in full.
+You can use `cview` to view a contact.
 
 **Format:** `cview INDEX`
 
@@ -602,7 +602,7 @@ Input | Expected Output
 
 #### Marking a contact: `cmark`
 
-Every week, you attend a robotics interest group with your Professor`David Li` and your classmate `Irfan Ibrahim`. You can use `cmark` to mark `Irfan` and `David`'s contact easy reference.
+You can use `cmark` to mark contacts of your Professors and TAs.
 
 **Format:** `cmark INDEX [INDEX]...`
 
@@ -630,7 +630,7 @@ _See also: [Unmarking a contact](#unmarking-a-contact-cunmark)_
 
 #### Unmarking a contact: `cunmark`
 
-You have completed your CS2103T project and you will not be contacting your group mates `Alex`, `Bernice` and `Charlotte` as often. You can use `cunmark` to unmark their contacts.  
+You can use `cunmark` to unmark marked contacts.
 
 **Format:** `cunmark INDEX [INDEX]...`
 
@@ -681,7 +681,7 @@ This section details all the features and _commands_ available in SoConnect that
 
 #### Adding an event: `eadd`
 
-Finally, after a tiring semester, you want to reward yourself with a summmer party that you and your friends have been planning. You can use `eadd` to add this event to SoConnect.
+You can use `eadd` to add your lectures and tutorials.
 
 **Format:** `eadd n/NAME at/START_TIME [end/END_TIME] [d/DESCRIPTION] [a/ADDRESS] [z/ZOOM] [t/TAG]…`
 
@@ -708,7 +708,7 @@ Input | Expected Output
 
 #### Deleting an event: `edelete`
 
-You have just submitted your CS2103T project and you wish to delete the `CS2103T project meeting` event as it is taking up space in SoConnect app. You can use `edelete` to delete this event.
+You can use `edelete` to delete outdated events.
 
 **Format:** `edelete INDEX1[-INDEX2]`
 
@@ -734,7 +734,7 @@ Input | Expected Output
 
 #### Editing an event: `eedit`
 
-Suppose you accidentally added `CS2103T Exam` with the wrong tag `CCA`. You can use `eedit` to delete the tag.
+You can use `eedit` to update the information of your events.
 
 **Format:** `eedit INDEX [n/NAME] [at/START_TIME] [end/END_TIME] [d/DESCRIPTION] [a/ADDRESS] [z/ZOOM] [dt/TAG_DELETED]…​ [t/TAG_ADDED]…`
 
@@ -806,7 +806,7 @@ Input | Expected Output
 
 #### Listing all events: `elist`
 
-Suppose you have a list of tasks stored in SoConnect that you want to accomplish by the end of the day, you can use `elist` to list the dateline of each events.
+You can use `elist` to list all your lectures, tutorials and exams.
 
 **Format:** `elist [at/] [end/] [d/] [a/] [z/] [t/]`
 
@@ -832,7 +832,7 @@ Input | Expected Output
 
 #### Clearing all events: `eclear`
 
-As you prepare for a new academic year, you can use `eclear` to discard all past events in SoConnect.
+You can use `eclear` to clear all events.
 
 **Format:** `eclear`
 
@@ -865,7 +865,7 @@ Input | Expected Output
 
 #### Marking an event: `emark`
 
-You have CS2101 lesson every tuesday and friday, you can use `emark` to mark this recurring event.
+You can use `emark` to mark recurring events like lectures or tutorials.
 
 **Format:** `emark INDEX [INDEX]…`
 
@@ -891,7 +891,7 @@ _See Also: [Unmarking an event](#unmarking-an-event-eunmark)_
 
 #### Unmarking an event: `eunmark`
 
-You can use `eunmark` to unmark the `Basketball training` that you go to less frequently because of your busy schedule.
+You can use `eunmark` to unmark events that you no longer frequently attend.
 
 **Format:** `eunmark INDEX [INDEX]...`
 
@@ -934,7 +934,7 @@ Events that have ended **will not be shown**
 
 #### Linking an event to contacts: `elink`
 
-You can use `elink` to link your CCA mate `Irfan Ibrahim` to the `Basketball training`. 
+You can use `elink` to link your Professors to lectures.
 
 **Format:** `elink EVENT_INDEX c/CONTACT_INDEX [c/CONTACT_INDEX]…`
 
@@ -960,7 +960,7 @@ _See Also: [Unlinking an event from contacts](#unlinking-an-event-from-contacts-
 
 **Format:** `eunlink EVENT_INDEX c/CONTACT_INDEX [c/CONTACT_INDEX]…`
 
-You can use `eunlink` to unlink your professor `David Li` from the `CS2103T Lecture` event.
+You can use `eunlink` to unlink professors from lectures.
 
 **Examples:**
 
