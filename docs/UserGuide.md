@@ -426,7 +426,7 @@ At the start of every semester, you may need to take many new modules. You can u
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
 * You can add a contact with any number of tags (including 0)
-* You **cannot** add a contact with the **same name** as an existing contact.
+* You **cannot** add a contact with the **same name** as an **existing** contact.
 * You can refer to the following [**list of _prefixes_**](#list-of-prefixes) to see which _prefix_ to use.
 </div>
 
@@ -448,7 +448,7 @@ At the end of the semester, you may no longer need to contact your TA `Bernice Y
 
 * Deletes the contact(s):
     * at the specified `INDEX1` <u>or</u>
-    * between the specified range from `INDEX1` to `INDEX2` inclusively (if you provide `INDEX2`).
+    * between the specified range from `INDEX1` to `INDEX2` **inclusively** (if you provide `INDEX2`).
 * `INDEX1` and `INDEX2` refer to the index number shown in the displayed [contact list](#overview-of-soconnect).
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
@@ -658,32 +658,37 @@ _See also: [Marking a contact](#marking-a-contact-cmark)_
 
 ### Event Management
 
-This section details all the features and _commands_ available in SoConnect that can help you with managing your events:
+This section details all the features and _commands_ available in SoConnect that can help you with managing your **events**:
+
+**Basic** features:
 * [Adding an event](#adding-an-event-eadd)
-* [Clearing all event](#clearing-all-events-eclear)
 * [Deleting an event](#deleting-an-event-edelete)
 * [Editing an event](#editing-an-event-eedit)
 * [Finding events](#finding-events-efind)
-* [Linking an event to contacts](#linking-an-event-to-contacts-elink)
 * [Listing all events](#listing-all-events-elist)
+
+**Advanced** features:
+* [Clearing all event](#clearing-all-events-eclear)
+* [Viewing an event](#viewing-an-event-eview)  
 * [Marking an event](#marking-an-event-emark)
 * [Unmarking an event](#unmarking-an-event-eunmark)
 * [Sorting events](#sorting-events-esort)
+* [Linking an event to contacts](#linking-an-event-to-contacts-elink)  
 * [Unlinking an event from contacts](#unlinking-an-event-from-contacts-eunlink)
-* [Viewing an event](#viewing-an-event-eview)
+
 
 
 
 #### Adding an event: `eadd`
 
-Adds an event to SoConnect.
+Finally, after a tiring semester, you want to reward yourself with a summmer party that you and your friends have been planning. You can use `eadd` to add this event to SoConnect.
 
-**Format:** `eadd n/NAME at/START_TIME [end/END_TIME] [d/DESCRIPTION] [a/ADDRESS] [z/ZOOM] [t/TAG]…​`
+**Format:** `eadd n/NAME at/START_TIME [end/END_TIME] [d/DESCRIPTION] [a/ADDRESS] [z/ZOOM] [t/TAG]…`
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
-* An event can have any number of tags (including 0)
-* You **cannot** add an event with the **same name** as an existing event.
+* The event you add can have **any number** of tags (including 0)
+* You **cannot** add an event with the **same name** as an **existing** event.
 </div>
 
 <div markdown="block" class="alert alert-info">:information_source: **Note:**
@@ -696,32 +701,21 @@ Adds an event to SoConnect.
 
 Input | Expected Output
 --------|------------------
-`eadd n/Summer Party at/12-12-2021 15:12 a/123, Clementi Rd, 1234665 t/fun` | You should see this message in the message box:<br> `New event added: Summer Party; Start: 12-12-2021 15:12; Address: 123, Clementi Rd, 1234665; Tags: [fun]` <br><br> You should also see `Summer Party` **at the end** of your event list: ![New Event](images/demo-screenshots/eaddEx.png)
+`eadd n/Summer Party at/12-12-2021 15:12 a/123, Clementi Rd, 1234665 t/fun` | A new event is added to the bottom of the [event list](#overview-of-soconnect) <br><br> You should also see `Summer Party` **at the end** of your event list: ![New Event](images/demo-screenshots/eaddEx.png)
 
-*Index of the newly added event will depend on your previous number of events.
-
-
-#### Clearing all events: `eclear`
-
-Clears all entries of events from SoConnect.
-
-**Format:** `eclear`
-
-<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
-This will not change the contacts saved in SoConnect. 
-</div>
+* Index of the newly added event will be **one more** than the current number of events.
 
 
 #### Deleting an event: `edelete`
 
-Deletes the specified event(s) from SoConnect.
+You have just submitted your CS2103T project and you wish to delete the `CS2103T project meeting` event as it is taking up space in SoConnect app. You can use `edelete` to delete this event.
 
 **Format:** `edelete INDEX1[-INDEX2]`
 
-* Deletes the event(s) at:
-    * the specified `INDEX1` or
-    * between the specified range from `INDEX1` to `INDEX2` inclusively (if you provide `INDEX2`).
-* `INDEX1` and `INDEX2` refer to the index numbers shown in the displayed event list.
+* Deletes the event(s):
+    * at the specified `INDEX1` or
+    * between the specified range from `INDEX1` to `INDEX2` **inclusively** (if you provide `INDEX2`).
+* `INDEX1` and `INDEX2` refer to the index numbers shown in the displayed [event list](#overview-of-soconnect).
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
@@ -733,16 +727,16 @@ Deletes the specified event(s) from SoConnect.
 
 Input | Expected Output
 --------|------------------
-[`elist`](#listing-all-events-elist) followed by `edelete 2` | Deletes the second event from SoConnect. <br><br> You should see these messages in the message box: <br>1. After `elist`: `Listed all events` <br>2. After `edelete 2`: `Deleted Event: Basketball training; Start: 01-11-2021 20:00; End: 01-11-2021 21:00; Description: Meeting every week; Address: NUS Sport Centre; Tags: [CCA][Recurring]`
-[`efind Class`](#finding-events-efind) followed by `edelete 1` | Deletes the first event from the **results of the `efind` _command_**.<br><br> You should see these messages in the message box: <br>1. After `efind class`: `1 events listed!` <br>2. After `edelete 1`: `Deleted Event: Dance class; Start: 13-11-2021 20:00; End: 13-11-2021 22:00; Description: Dancing is my passion. I like pole dancing.; Address: NUS UTown; Tags: [CCA][Recurring]`
-`edelete 1-2` | Deletes events from index 1 to 2 from the **currently displayed** event list. <br><br> You should see these messages in the message box: <br> `Deleted Event: CS2103T project meeting; Start: 10-10-2021 21:00; End: 10-10-2021 22:00; Zoom Link: nus-sg.zoom.us/j/21342513543; Tags: [Recurring][CS2103T]` <br> `Deleted Event: Basketball training; Start: 01-11-2021 20:00; End: 01-11-2021 21:00; Description: Meeting every week; Address: NUS Sport Centre; Tags: [CCA][Recurring]`
+[`elist`](#listing-all-events-elist) followed by `edelete 2` | Deletes the second event from SoConnect. <br><br> You should see these messages in the message box: <br>1. After `elist`: you should see the full list of events in the event list. <br>2. After `edelete 2`: You should not see `Basketball training` event in the event list after the operation.
+[`efind Class`](#finding-events-efind) followed by `edelete 1` | Deletes the first event from the **results of the `efind` _command_**.<br><br> You should see these messages in the message box: <br>1. After `efind class`: you should see a list of events with names containing `Class` in the event list. <br>2. After `edelete 1`: You should not see `Dance class` in the event list. 
+`edelete 1-2` | Deletes events from index 1 to 2 from the **currently displayed** event list. <br><br> You should see the **first and second** event `CS2103T project meeting` and `Basketball training` removed from the event list. 
 
 
 #### Editing an event: `eedit`
 
-Edits an existing event in SoConnect.
+Suppose you accidentally added `CS2103T Exam` with the wrong tag `CCA`. You can use `eedit` to delete the tag.
 
-**Format:** `eedit INDEX [n/NAME] [at/START_TIME] [end/END_TIME] [d/DESCRIPTION] [a/ADDRESS] [z/ZOOM] [dt/TAG_DELETED]…​ [t/TAG_ADDED]…​`
+**Format:** `eedit INDEX [n/NAME] [at/START_TIME] [end/END_TIME] [d/DESCRIPTION] [a/ADDRESS] [z/ZOOM] [dt/TAG_DELETED]…​ [t/TAG_ADDED]…`
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:** 
 
@@ -750,11 +744,11 @@ You must provide **at least one** of the optional _fields_.
 </div>
 
 * Edits the event at the specified `INDEX`.
-* `INDEX` refers to the index number shown in the displayed event list.
-* Existing values will be updated to the input values.
+* `INDEX` refers to the index number shown in the displayed [event list](#overview-of-soconnect).
+* The values you provide will be used to update to the existing fields.
 * You can use `t/` to add a tag.
-* You can remove a specific tag by typing `dt/` followed by the name of the tag that you wish to remove.
-* You can remove all existing tags of an event by typing `dt/*`.
+* You can remove an **existing** tag by typing `dt/` followed by the name of the tag that you wish to remove.
+* You can remove **all tags** of an event by typing `dt/*`.
 * When editing tags, the tags to be deleted will be removed first, before new tags are added.
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
@@ -769,29 +763,29 @@ You must provide **at least one** of the optional _fields_.
 
 Input | Expected Output
 --------|------------------
-`eedit 2 n/CS2103T Exam dt/CCA t/Hard` | Changes the name of the second event in the **currently displayed** event list to `CS2103T Exam`, deletes the tag `CCA` and adds the tag `Hard`. <br><br> You should see this message in the message box: <br> `Edited Event: CS2103T Exam; Start: 01-11-2021 20:00; End: 01-11-2021 21:00; Description: Meeting every week; Address: NUS Sport Centre; Tags: [Recurring][Hard]` <br><br> You should also see these changes: ![Edit Event](images/demo-screenshots/eeditEx.png)
+`eedit 2 n/CS2103T Exam dt/CCA t/Hard` | Changes the name of the second event in the **currently displayed** event list to `CS2103T Exam`, deletes the tag `CCA` and adds the tag `Hard`. <br><br> You should see these changes: ![Edit Event](images/demo-screenshots/eeditEx.png)
 
 
 
 #### Finding events: `efind`
 
-Finds all events that contain any of the given keywords based on your search type.
+You can use `efind` to see how many meetings you have upcoming.
 
 **Format:** `efind [KEYWORD]… [at/KEYWORD…] [end/KEYWORD…] [d/KEYWORD…] [a/KEYWORD…] [z/KEYWORD…] [t/KEYWORD…]`
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
-There are two types of event searches you can do in SoConnect:
+There are **two** types of event searches you can do in SoConnect:
 1. If you **do not specify any optional _fields_ before your keyword(s)**, e.g. `efind KEYWORD1 KEYWORD2`,
 
-   You will only search the names of the events based on the keyword(s) provided.
+   SoConnect will use the keyword(s) you provide to search the **names** of the events **by default**.
 
-2. If you specify any _prefix_ before your keyword(s), e.g. `efind a/KEYWORD1 d/KEYWORD2`,
+2. If you specify **any _prefix_** before your keyword(s), e.g. `efind a/KEYWORD1 d/KEYWORD2`,
 
    You will search the addresses and descriptions of the events based on `KEYWORD1` and `KEYWORD2` respectively.
 </div>
 
 * You need to provide **at least one keyword**.
-* You can provide multiple keywords without specifying any _prefixes_.
+* You can provide **multiple keywords** for each _field_.
 * You can only **specify each optional _field_ once**.
 * Partial words can be matched e.g. `Exa` will match `CS2103T Exam`.
 * Events matching at least one keyword will be returned.
@@ -806,13 +800,141 @@ The search by `efind` is case-insensitive. e.g. `exams` will match `Exams`.
 
 Input | Expected Output
 --------|------------------
-`efind meet` | Displays events with names that contain `meet`. <br><br> You should see this message in the message box:<br> `1 events listed!` <br><br> You should also see only this **one event**: ![Find Event 1](images/demo-screenshots/efindEx1.png)
-`efind t/CS2103T Intern` | Displays events with tags that contain `CS2103T` and `Intern`.<br><br> You should see this message in the message box:<br> `2 events listed!` <br><br> You should also see only these **two events**: ![Find Event 2](images/demo-screenshots/efindEx2.png)
+`efind meet` | Displays events with names that contain `meet`. <br><br> You should see only this **one event**: ![Find Event 1](images/demo-screenshots/efindEx1.png)
+`efind t/CS2103T Intern` | Displays events with tags that contain `CS2103T` and `Intern`.<br><br> You should see only these **two events**: ![Find Event 2](images/demo-screenshots/efindEx2.png)
+
+
+#### Listing all events: `elist`
+
+Suppose you have a list of tasks stored in SoConnect that you want to accomplish by the end of the day, you can use `elist` to list the dateline of each events.
+
+**Format:** `elist [at/] [end/] [d/] [a/] [z/] [t/]`
+
+* Event names are **always** displayed.
+* If you **do not provide any optional _prefixes_**, e.g. `elist` , all available details of each event will be displayed, **by default**.
+* If you **provide optional _prefixes_**, only the **names and the corresponding _fields_** for each event will be shown.
+* You can provide **more than one** optional _prefixes_.
+* The **order** you provide the _prefixes_ **does not matter**. e.g. both `elist d/ at/` and `elist at/ d/` will only show the names, descriptions and starting times of each event.
+* _Fields_ of an event that have no value will not be shown.
+
+<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
+
+**Do not** add extraneous values after each optional _prefix_ you specify.
+</div>
+
+**Examples:**
+
+Input | Expected Output
+--------|------------------
+`elist` | Shows **all events** in SoConnect with **all available details** for each event. <br><br> You should see all your events in the [event list](#overview-of-soconnect)
+`elist d/ at/` | Shows **all events** in SoConnect with **only their names, start date and time and description** (if available).<br><br> You should also see the event list displays all events with **only the specified _fields_**: ![List Events](images/demo-screenshots/elistEx.png)
+
+
+#### Clearing all events: `eclear`
+
+As you prepare for a new academic year, you can use `eclear` to discard all past events in SoConnect.
+
+**Format:** `eclear`
+
+<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
+This will not change the contacts saved in SoConnect. 
+</div>
+
+
+#### Viewing an event: `eview`
+
+You can use `eview` to display the details of your basketball training in full.
+
+**Format:** `eview INDEX`
+
+* Views the event at the specified `INDEX`.
+* `INDEX` refers to the index number shown in the displayed event list.
+* All truncated details of the event will be **shown fully**.
+
+<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
+
+`INDEX` **must be a positive integer**. e.g. 1, 2, 3, …
+</div>
+
+**Examples:**
+
+Input | Expected Output
+--------|------------------
+`eview 1` | Shows all details of the first event in the **currently displayed** event list **fully**. <br><br> _The expected display is similar to [Viewing a contact](#viewing-a-contact-cview)_
+
+
+#### Marking an event: `emark`
+
+You have CS2101 lesson every tuesday and friday, you can use `emark` to mark this recurring event.
+
+**Format:** `emark INDEX [INDEX]…`
+
+* Marks the event at `INDEX` and **pins it to the top** of the event list.
+* If you wish to mark **more than one event**, you can specify multiple indexes, e.g. `emark 1 2`,
+* the marked events will appear in **reverse order** to the order you specify their corresponding indexes.
+* `INDEX` refers to the index number shown in the **currently displayed** event list.
+
+<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
+
+`INDEX` **must be a positive integer**, e.g. 1, 2, 3,…<br>
+`INDEX` must **not be greater** than the **number of events** in the event list.
+</div>
+
+**Examples:**
+
+Input | Expected Output
+--------|------------------
+`emark 2` | Marks the second event of **currently displayed** event list in SoConnect. <br><br> _The expected display is similar to [marking a contact](#marking-a-contact-cmark)_
+
+_See Also: [Unmarking an event](#unmarking-an-event-eunmark)_
+
+
+#### Unmarking an event: `eunmark`
+
+You can use `eunmark` to unmark the `Basketball training` that you go to less frequently because of your busy schedule.
+
+**Format:** `eunmark INDEX [INDEX]...`
+
+* Unmarks the event at `INDEX`.
+* You wish to unmark **more than one event** by specifying multiple indexes, e.g. `eunmark 1 2`
+* the indexes in which the events appear will be **in the order in which** you specify them.
+* `INDEX` refers to the index number shown in the displayed [event list](#overview-of-soconnect).
+
+<div markdown="block" class="alert alert-primary">:bulb: **Tip:**
+
+* `INDEX` **must be a positive integer**, e.g. 1, 2, 3,…
+* `INDEX` must **not be greater** than the **number of events** in the event list.
+* You must ensure that the event indexed at `INDEX` is **initially marked**.
+</div>
+
+**Examples:**
+
+Input | Expected Output
+--------|------------------
+`eunmark 2` | Unmarks the **second** event of **currently displayed** event list in SoConnect.<br><br> _The expected display is similar to [Unmarking a contact](#unmarking-a-contact-cunmark)_
+`eunmark 2 4` | Unmarks the **second and fourth** event in SoConnect.
+
+_See Also: [Marking an event](#marking-an-event-emark)_
+
+
+#### Sorting events: `esort`
+
+You can use `esort` to arrange your upcoming events by their start times.
+
+**Format:** `esort`
+
+**Examples:**
+![Sort example](images/demo-screenshots/sortResult.png)
+
+<div markdown="span" class="alert alert-info">:information_source: **Note:**
+
+Events that have ended **will not be shown**
+</div>
 
 
 #### Linking an event to contacts: `elink`
 
-Links the specified event to one or more contacts.
+You can use `elink` to link your CCA mate `Irfan Ibrahim` to the `Basketball training`. 
 
 **Format:** `elink EVENT_INDEX c/CONTACT_INDEX [c/CONTACT_INDEX]…`
 
@@ -834,104 +956,11 @@ Input | Expected Output
 _See Also: [Unlinking an event from contacts](#unlinking-an-event-from-contacts-eunlink)_
 
 
-#### Listing all events: `elist`
-
-Displays all events in SoConnect, with all details by default.
-
-**Format:** `elist [at/] [end/] [d/] [a/] [z/] [t/]`
-
-* Event names are always displayed.
-* When no optional _prefixes_ are provided, e.g. `elist` , all available details of each event will be displayed.
-* When optional _prefixes_ are provided, only the names and the corresponding specified _fields_ for each event will be shown.
-* You can provide more than one optional _prefixes_.
-* The order of the _prefixes_ does not matter. e.g. both `elist d/ at/` and `elist at/ d/` will only show the names, descriptions and starting times of each event.
-* _Fields_ of an event that have no value will not be shown.
-
-<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
-
-**Do not** add extraneous values after each optional _prefix_ you specify.
-</div>
-
-**Examples:**
-
-Input | Expected Output
---------|------------------
-`elist` | Shows **all events** in SoConnect with **all available details** for each event. <br><br> You should see this message in the message box: <br>`Listed all events`
-`elist d/ at/` | Shows **all events** in SoConnect with **only their names, start date and time and description** (if available). You should see this message in the message box: <br>`Listed all events` <br><br> You should also see the event list displays all events with **only the specified _fields_**: ![List Events](images/demo-screenshots/elistEx.png)
-
-
-#### Marking an event: `emark`
-
-Marks the specified event(s).
-
-**Format:** `emark INDEX [INDEX]…`
-
-* Marks the event at `INDEX` and **pins it to the top** of the event list.
-* You can specify more than one `INDEX`, e.g. `emark 1 2`, the order in which the marked events appear will be in reverse order to the order you specify their corresponding indexes.
-* `INDEX` refers to the index number shown in the **currently displayed** event list.
-
-<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
-
-`INDEX` **must be a positive integer**, e.g. 1, 2, 3,…<br>
-`INDEX` must **not be greater** than the **number of events** in the event list.
-</div>
-
-**Examples:**
-
-Input | Expected Output
---------|------------------
-`emark 2` | Marks the second event of **currently displayed** event list in SoConnect. <br><br> _The expected display is similar to [marking a contact](#marking-a-contact-cmark)_
-
-_See Also: [Unmarking an event](#unmarking-an-event-eunmark)_
-
-
-#### Unmarking an event: `eunmark`
-
-Unmarks the specified event(s).
-
-**Format:** `eunmark INDEX [INDEX]...`
-
-* Unmarks the event at `INDEX`.
-* You may unmark **more than one event** by specifying multiple indexes, e.g. `eunmark 1 2`, the indexes in which the events appear will be **in the order in which** you specify them.
-* `INDEX` refers to the index number shown in the displayed event list.
-
-<div markdown="block" class="alert alert-primary">:bulb: **Tip:**
-
-* `INDEX` **must be a positive integer**, e.g. 1, 2, 3,…
-* `INDEX` must **not be greater** than the **number of events** in the event list.
-* You must ensure that the event indexed at `INDEX` is **initially marked**.
-</div>
-
-**Examples:**
-
-Input | Expected Output
---------|------------------
-`eunmark 2` | Unmarks the second event of **currently displayed** event list in SoConnect.<br><br> _The expected display is similar to [Unmarking a contact](#unmarking-a-contact-cunmark)_
-`eunmark 2 4` | Unmarks the second and fourth event in SoConnect.
-
-_See Also: [Marking an event](#marking-an-event-emark)_
-
-
-#### Sorting events: `esort`
-
-Sorts all events by start time and displays all upcoming or ongoing events.
-
-**Format:** `esort`
-
-**Examples:**
-![Sort example](images/demo-screenshots/sortResult.png)
-
-<div markdown="span" class="alert alert-info">:information_source: **Note:**
-
-Events that have ended **will not be shown**
-</div>
-
-
 #### Unlinking an event from contacts: `eunlink`
 
 **Format:** `eunlink EVENT_INDEX c/CONTACT_INDEX [c/CONTACT_INDEX]…`
 
-Unlinks the specified event and the specified contact(s).
+You can use `eunlink` to unlink your professor `David Li` from the `CS2103T Lecture` event.
 
 **Examples:**
 
@@ -943,40 +972,87 @@ Input | Expected Output
 _See Also: [Linking an event to contacts](#linking-an-event-to-contacts-elink)_
 
 
-#### Viewing an event: `eview`
+### General
 
-Views an event with all details fully shown.
+This section details all the other features and _commands_ available in SoConnect that can enhance your SoConnect experience:
 
-**Format:** `eview INDEX`
+**Basic** features:
+* [Viewing help](#viewing-help-help)
+* [Exiting SoConnect](#exiting-soconnect-exit)
 
-* Views the event at the specified `INDEX`.
-* `INDEX` refers to the index number shown in the displayed event list.
-* All truncated details of the event will be shown fully.
+**Advanced** features:
+* [Redoing a _command_](#redoing-a-command-redo)
+* [Undoing a _command_](#undoing-a-command-undo)
+* [Opening the calendar](#opening-the-calendar-calendar)
+
+
+#### Viewing help: `help`
+
+You can use `help` command whenever you are stuck.
+
+**Format:** `help`
+
+![help message](images/demo-screenshots/helpWindow.png)
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 
-`INDEX` **must be a positive integer**. e.g. 1, 2, 3, …
+Alternatively, you can view the help window using the top menu bar via `Help -> Help` or press `F1`.
 </div>
+
+
+#### Exiting SoConnect: `exit`
+
+You can use `exit` to close the SoConnect app.
+
+**Format:** `exit`
+
+<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
+
+Alternatively, you can exit SoConnect using the top menu bar via `File -> Exit`.
+</div>
+
+
+#### Undoing a _command_: `undo`
+
+You can use `undo` to remove an undesired change.
+
+**Format:** `undo`
 
 **Examples:**
 
 Input | Expected Output
 --------|------------------
-`eview 1` | Shows all details of the first event in the **currently displayed** event list **fully**. <br><br> _The expected display is similar to [Viewing a contact](#viewing-a-contact-cview)_
+[`cadd n/John Doe e/john@gmail.com`](#adding-a-contact-cadd) followed by `undo` | **Removes the added** contact from the contact list.
+
+_See Also: [Redoing a command](#redoing-a-command-redo)_
+
+<div markdown="span" class="alert alert-info">:information_source: **Note:**
+
+[Undo](#undoing-a-command-undo) and [redo](#redoing-a-command-redo) will only work for _commands_ listed in the
+[Contact Management](#contact-management) and [Event Management](#event-management) features section.
+
+_Commands_ listed in the [General](#general) section are not undoable.
+</div>
 
 
-### General
+#### Redoing a _command_: `redo`
 
-This section details all the other features and _commands_ available in SoConnect that can enhance your SoConnect experience:
-* [Opening the calendar](#opening-the-calendar-calendar)
-* [Exiting SoConnect](#exiting-soconnect-exit)
-* [Viewing help](#viewing-help-help)
-* [Redoing a _command_](#redoing-a-command-redo)
-* [Undoing a _command_](#undoing-a-command-undo)
+You can use `redo` to restore a change that you accidentally undo.
+
+**Format:** `redo`
+
+**Examples:**
+
+Input | Expected Output
+--------|------------------
+[`edelete 1`](#deleting-an-event-edelete) followed by [`undo`](#undoing-a-command-undo) then `redo` | First **restores the deleted event** in the event list. <br>Then `redo` will **delete the same event again**.
+
+_See Also: [Undoing a command](#undoing-a-command-undo)_
+
 
 #### Opening the calendar: `calendar`
 
-Shows a calendar of all the events.
+You can use `calendar` to display all your events in a calendar.
 
 **Format:** `calendar`
 
@@ -1006,71 +1082,6 @@ Any changes made in the calendar window will not be saved.
 Doing so might result in a crash and your data may be lost.
 </div>
 
-
-
-#### Exiting SoConnect: `exit`
-
-Exits and closes SoConnect.
-
-**Format:** `exit`
-
-<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
-
-Alternatively, you can exit SoConnect using the top menu bar via `File -> Exit`.
-</div>
-
-
-#### Viewing help: `help`
-
-Displays a summary of all _commands_ in SoConnect User Guide.
-
-**Format:** `help`
-
-![help message](images/demo-screenshots/helpWindow.png)
-
-<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
-
-Alternatively, you can view the help window using the top menu bar via `Help -> Help` or press `F1`.
-</div>
-
-
-#### Redoing a _command_: `redo`
-
-Restores SoConnect to a previously undone state from its history.
-
-**Format:** `redo`
-
-**Examples:**
-
-Input | Expected Output
---------|------------------
-[`edelete 1`](#deleting-an-event-edelete) followed by [`undo`](#undoing-a-command-undo) then `redo` | First **restores the deleted event** in the event list. <br>Then `redo` will **delete the same event again**.
-
-_See Also: [Undoing a command](#undoing-a-command-undo)_
-
-
-#### Undoing a _command_: `undo`
-
-Restores SoConnect to its previous state from its history.
-
-**Format:** `undo`
-
-**Examples:**
-
-Input | Expected Output
---------|------------------
-[`cadd n/John Doe e/john@gmail.com`](#adding-a-contact-cadd) followed by `undo` | **Removes the added** contact from the contact list.
-
-_See Also: [Redoing a command](#redoing-a-command-redo)_
-
-<div markdown="span" class="alert alert-info">:information_source: **Note:**
-
-[Undo](#undoing-a-command-undo) and [redo](#redoing-a-command-redo) will only work for _commands_ listed in the
-[Contact Management](#contact-management) and [Event Management](#event-management) features section.
-
-_Commands_ listed in the [General](#general) section are not undoable.
-</div>
-
 --------------------------------------------------------------------------------------------------------------------
 
 ## SoConnect Saved Data
@@ -1086,8 +1097,8 @@ SoConnect data are saved as a _JSON file_ `[JAR file location]/data/soconnect.js
 Advanced users are welcome to update data directly by editing that data file.
 
 <div markdown="span" class="alert alert-warning">:exclamation: **Caution:**
-If your changes to the data file make its format invalid, 
-SoConnect will discard all data and start with an empty data file at the next run.
+If your changes to the data file make its [format](https://docs.fileformat.com/web/json/) invalid, 
+SoConnect will **discard all data** and start with an empty data file at the next run.
 </div>
 
 --------------------------------------------------------------------------------------------------------------------
@@ -1115,7 +1126,7 @@ telegram handles and Zoom meeting links.<br>
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 
-Clickable hyperlinks are underlined in blue
+Clickable hyperlinks are <u>underlined in blue</u>
 </div>
 
 Referring back to the same image, if you click on the zoom link saved under `Charlotte Oliveiro`,
@@ -1143,6 +1154,8 @@ For instance, you can link your *professor* to the lecture.
 
 
 ### How to start SoConnect using Terminal
+
+Proceed only if you cannot start SoConnect using [this](#quick-start) method.
 
 1. Open the terminal (For [MacOS](https://support.apple.com/en-sg/guide/terminal/welcome/mac) or Linux)
    or Command Prompt (For [Windows](https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/)).
@@ -1247,7 +1260,7 @@ Word | Explanation
 **Command** | A string of words and characters you type to perform an action, each command has its own **_Command format_**.
 **Command Format** | The structure that a _command_ must abide by for it to be executed.
 **Parameter(s)** | Information supplied by the user to the application when executing certain _commands_.
-**Prefix** | A tag, consisting of a slash - "/", with one or a few characters to denote information about a certain **_field_**.
+**Prefix** | A tag, consisting of a slash - "/" following one or a few characters to denote information about a certain **_field_**.
 **Field(s)** | The information type within each contact or event <br> For example, **Name** and **Address** of a contact are _fields_ of a contact.
 **Graphical User Interface (GUI)** | How the application appears to the user on his/her screen.
 **Hard Disk** | Device in a computer that is specialized in storing data permanently.
