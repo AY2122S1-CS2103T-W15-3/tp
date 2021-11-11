@@ -432,10 +432,12 @@ At the start of every semester, you may need to take many new modules. You can u
 
 **Examples:**
 
-Input | Expected Output
-------|------------------
-`cadd n/Alex Doe e/e0123456@u.nus.edu a/COM1 #99-99 th/johnDoe99 t/Professor` | You should see `Alex Doe` added **at the end** of your [contact list](#overview-of-soconnect): ![New Contact 1](images/demo-screenshots/caddEx1.png)
-`cadd n/ Jon Cheng t/TA e/e7654321@u.nus.edu a/COM1-0201 p/87654321 t/Senior th/jonnyjohnny z/https://nus-sg.zoom.us/j/0123456789?pwd=ABCDEFGHIJKLMNOPDJFHISDFSDH` | You should see `Jon Cheng` added **at the end** of your contact list: ![New Contact 2](images/demo-screenshots/caddEx2.png)
+{: .example-table}
+**Input 1** | `cadd n/Alex Doe e/e0123456@u.nus.edu a/COM1 #99-99 th/johnDoe99 t/Professor`
+**Expected Output 1** | You should see `Alex Doe` added **at the end** of your contact list. <br> ![New Contact 1](images/demo-screenshots/caddEx1.png)
+| |
+**Input 2** | `cadd n/ Jon Cheng t/TA e/e7654321@u.nus.edu a/COM1-0201 p/87654321 t/Senior th/jonnyjohnny z/https://nus-sg.zoom.us/j/0123456789?pwd=ABCDEFGHIJKLMNOPDJFHISDFSDH`
+**Expected Output 2** | You should see `Jon Cheng` added **at the end** of your contact list. <br> ![New Contact 2](images/demo-screenshots/caddEx2.png)
 
 * Index of the newly added contact will be one more than the previous number of contacts.
 
@@ -459,11 +461,15 @@ You can use `cdelete` to delete a contact.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-[`clist`](#listing-all-contacts-clist) followed by `cdelete 2` | Deletes the second contact in the contact list.<br><br> 1. After entering `clist`, you should see the full list of contacts in the contact list.<br> 2. After entering `cdelete2`, you should **not** see `Bernice Yu` contact in the contact list after the operation.
-[`cfind Bernice`](#finding-contacts-cfind) followed by `cdelete 1` | Deletes the first contact in the **`cfind` _command_search results**. <br><br> 1. After entering `cfind Bernice`, you should see only contacts with names containing `Bernice` in the contact list.<br> 2. After entering `cdelete 1`, you should see the first contact in the list in point 1 removed.
-`cdelete 3-5` | Deletes contacts from indexes **3 to 5 (inclusive)** from the **currently displayed** contact list. <br><br> You should see the **third, fourth and fifth** contacts (i.e. `Charlotte Oliveiro`, `David Li` and `Irfan Ibrahim`) removed from the contact list.
+{: .example-table}
+**Input 1** | [`clist`](#listing-all-contacts-clist) followed by `cdelete 2`
+**Expected Output 1** | Deletes the second contact in the contact list.<br><br> 1. After entering `clist`, you should see the **full list of contacts** in the contact list.<br> 2. After entering `cdelete2`, you should **not** see `Bernice Yu` contact in the contact list after the operation. <br><br> ![Delete contact 1](images/demo-screenshots/cdeleteEx1.png)
+| |
+**Input 2** | [`cfind Bernice`](#finding-contacts-cfind) followed by `cdelete 1`
+**Expected Output 2** | Deletes the first contact from the **results of the `efind` _command_**. <br><br> 1. After entering `cfind Bernice`, you should see only contacts with names containing `Bernice` in the contact list.<br> 2. After entering `cdelete 1`, you should see the first contact in the new list removed. <br><br> ![Delete contact 2](images/demo-screenshots/cdeleteEx2.png)
+| |
+**Input 3** | `cdelete 3-5`
+**Expected Output 3**| Deletes contacts from indexes **3 to 5 (inclusive)** from the **currently displayed** contact list. <br><br> You should see the **third, fourth and fifth** contacts (i.e. `Charlotte Oliveiro`, `David Li` and `Irfan Ibrahim`) removed from the contact list. <br><br> ![Delete contact 3](images/demo-screenshots/cdeleteEx3.png)
 
 
 #### Editing a contact: `cedit`
@@ -491,10 +497,12 @@ You can use `cedit` to edit a contact's information.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-`cedit 2 p/91234567 e/agentX@thehightable.com` | Edits the **phone number** and **email address** of the **second** contact in the **currently displayed** contact list to be `91234567` and `agentX@thehightable.com` respectively. <br><br> You should see the following changes: ![Edit Contact 1](images/demo-screenshots/ceditEx1.png)
-`cedit 1 n/Betsy Crower dt/*` | Edits the **name** of the first contact in the **currently displayed** contact list to be `Betsy Crower` and **clears all existing tags**. <br><br>You should see the following changes: ![Edit Contact 2](images/demo-screenshots/ceditEx2.png)
+{: .example-table}
+**Input 1** | `cedit 2 p/91234567 e/agentX@thehightable.com`
+**Expected Output 1** | Edits the phone number and email address of the second contact in the **currently displayed** contact list to be `91234567` and `agentX@thehightable.com` respectively. <br><br> You should see the following changes: ![Edit Contact 1](images/demo-screenshots/ceditEx1.png)
+| |
+**Input 2** | `cedit 1 n/Betsy Crower dt/*`
+**Expected Output 2** | Edits the name of the first contact in the **currently displayed** contact list to be `Betsy Crower` and clears all existing tags. <br><br>You should see the following changes: ![Edit Contact 2](images/demo-screenshots/ceditEx2.png)
 
 
 #### Finding contacts: `cfind`
@@ -530,10 +538,12 @@ The search by `cfind` is case-insensitive. e.g. `hans` will match `Hans`.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-`cfind alex david` | Displays the contacts of `Alex Yeoh` and `David Li`. <br><br> You should see only these **two contacts** in the [contact list](#overview-of-soconnect): ![Find Contact 1](images/demo-screenshots/cfindEx1.png)
-`cfind p/926 e/nus.edu` | Displays the contacts with phone numbers that contain `926` <u>or</u> with emails that contain `nus.edu`.<br><br> You should see only these **two contacts**: ![Find Contact 2](images/demo-screenshots/cfindEx2.png)
+{: .example-table}
+**Input 1** | `cfind alex david`
+**Expected Output 1** | Displays the contacts with names that contain `alex` and `david`. <br><br> You should see only these **two contacts** in the contact list: ![Find Contact 1](images/demo-screenshots/cfindEx1.png)
+| |
+**Input 2** | `cfind p/926 e/nus.edu`
+**Expected Output 2** | Displays the contacts with phone numbers that contain `926` <u>or</u> with emails that contain `nus.edu`.<br><br> You should see only these **two contacts**: ![Find Contact 2](images/demo-screenshots/cfindEx2.png)
 
 
 #### Listing all contacts: `clist`
@@ -557,10 +567,12 @@ You can use `clist` to list all contacts.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-`clist` | Shows **all available details** of each contact in SoConnect. <br><br> You should see all your contacts in the [contact list](#overview-of-soconnect): ![Success Message](images/demo-screenshots/successMessage.png)
-`clist e/ p/` | Shows **only the names, email addresses and phone numbers** (if available) of each contact in SoConnect. <br><br> You should see the contacts list displays **only the specified _fields_**: ![List Contact 1](images/demo-screenshots/clistEx.png)
+{: .example-table}
+**Input 1** | `clist`
+**Expected Output 1** | Shows **all available details** of each contact in SoConnect. <br><br>You should see **all your contacts** in the contact list.
+| |
+**Input 2** | `clist e/ p/`
+**Expected Output 2** | Shows **only** the names, email addresses and phone numbers (if available) of each contact in SoConnect. <br><br> You should see the contacts list displays **only the specified _fields_**: ![List Contact 1](images/demo-screenshots/clistEx.png)
 
 
 #### Clearing all contacts: `cclear`
@@ -595,9 +607,9 @@ You can use `cview` to view a contact.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-`cview 2` | Shows all details of the second contact of the **currently displayed** in SoConnect **fully**. <br><br> You should see this change in your **viewed** contact: ![View Contact](images/demo-screenshots/cviewEx.png)
+{: .example-table}
+**Input 1** | `cview 2`
+**Expected Output 1** | Shows all details of the second contact of the **currently displayed** in SoConnect **fully**. <br><br> You should see this change in your **viewed** contact: ![View Contact](images/demo-screenshots/cviewEx.png)
 
 
 #### Marking a contact: `cmark`
@@ -620,10 +632,12 @@ You can use `cmark` to mark contacts of your Professors and TAs.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-`cmark 2` | Marks the **second** contact of the **currently displayed** contact list in SoConnect. <br><br> You should see `Bernice Yu` **pinned to the top** of your contact list with the [**Bookmark Icon**](#icons): ![Mark Contact](images/demo-screenshots/cmarkEx1.png)
-`cmark 4 5` | Marks the **fourth and fifth** contacts of the **currently displayed** contact list in SoConnect. <br><br> You should see `Irfan Ibrahim` and `David Li` **pinned to the top** of your contact list **in that order** with the **Bookmark Icon**: ![Mark Contact](images/demo-screenshots/cmarkEx2.png)
+{: .example-table}
+**Input 1** | `cmark 2`
+**Expected Output 1** | Marks the **second** contact of the **currently displayed** contact list in SoConnect. <br><br> You should see `Bernice Yu` **pinned to the top** of your contact list with the **Bookmark Icon**: ![Mark Contact](images/demo-screenshots/cmarkEx1.png)
+| |
+**Input 2** | `cmark 4 5`
+**Expected Output 2** | Marks the **fourth and fifth** contacts of the **currently displayed** contact list in SoConnect. <br><br> You should see `Irfan Ibrahim` and `David Li` **pinned to the top** of your contact list **in that order** with the **Bookmark Icon**: ![Mark Contact](images/demo-screenshots/cmarkEx2.png)
 
 _See also: [Unmarking a contact](#unmarking-a-contact-cunmark)_
 
@@ -648,10 +662,12 @@ You can use `cunmark` to unmark marked contacts.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-[`cmark 2 3`](#marking-a-contact-cmark) followed by `cunmark 1` | Unmarks the first contact of the **currently displayed** contact list in SoConnect. <br><br> You should see `Charlotte Oliveiro` moved to the **bottom of your marked contact list** without the [**Bookmark Icon**](#icons): ![Unmark Contact](images/demo-screenshots/cunmarkEx1.png)
-[`cmark 1 2 3`](#marking-a-contact-cmark) followed by `cunmark 1 2` | Unmarks the first and second contact of the **currently displayed** contact list in SoConnect. <br><br> You should see `Bernice Yu` and `Charlotte Oliveiro` moved to the **bottom of your marked contact list in that order** without the **Bookmark Icon**: ![Unmark Contact](images/demo-screenshots/cunmarkEx2.png)
+{: .example-table}
+**Input 1** | [`cmark 2 3`](#marking-a-contact-cmark) followed by `cunmark 1`
+**Expected Output 1** | Unmarks the first contact of the **currently displayed** contact list in SoConnect. <br><br> You should see `Charlotte Oliveiro` moved to the **bottom of your marked contact list** without the **Bookmark Icon**: ![Unmark Contact](images/demo-screenshots/cunmarkEx1.png)
+| |
+**Input 2** | [`cmark 1 2 3`](#marking-a-contact-cmark) followed by `cunmark 1 2`
+**Expected Output 2** | Unmarks the first and second contact of the **currently displayed** contact list in SoConnect. <br><br> You should see `Bernice Yu` and `Charlotte Oliveiro` moved to the **bottom of your marked contact list in that order** without the **Bookmark Icon**: ![Unmark Contact](images/demo-screenshots/cunmarkEx2.png)
 
 _See also: [Marking a contact](#marking-a-contact-cmark)_
 
@@ -699,9 +715,9 @@ You can use `eadd` to add your lectures and tutorials.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-`eadd n/Summer Party at/12-12-2021 15:12 a/123, Clementi Rd, 1234665 t/fun` | A new event is added to the bottom of the [event list](#overview-of-soconnect) <br><br> You should also see `Summer Party` **at the end** of your event list: ![New Event](images/demo-screenshots/eaddEx.png)
+{: .example-table}
+**Input 1** | `eadd n/Summer Party at/12-12-2021 15:12 a/123, Clementi Rd, 1234665 t/fun`
+**Expected Output 1** | A new event is added to the bottom of the event list.<br><br> You should also see `Summer Party` **at the end** of your event list: ![New Event](images/demo-screenshots/eaddEx.png)
 
 * Index of the newly added event will be **one more** than the current number of events.
 
@@ -725,12 +741,17 @@ You can use `edelete` to delete outdated events.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-[`elist`](#listing-all-events-elist) followed by `edelete 2` | Deletes the second event from SoConnect. <br><br> You should see these messages in the message box: <br>1. After `elist`: you should see the full list of events in the event list. <br>2. After `edelete 2`: You should not see `Basketball training` event in the event list after the operation.
-[`efind Class`](#finding-events-efind) followed by `edelete 1` | Deletes the first event from the **results of the `efind` _command_**.<br><br> You should see these messages in the message box: <br>1. After `efind class`: you should see a list of events with names containing `Class` in the event list. <br>2. After `edelete 1`: You should not see `Dance class` in the event list. 
-`edelete 1-2` | Deletes events from index 1 to 2 from the **currently displayed** event list. <br><br> You should see the **first and second** event `CS2103T project meeting` and `Basketball training` removed from the event list. 
+{: .example-table}
+**Input 1** | [`elist`](#listing-all-events-elist) followed by `edelete 2`
+**Expected Output 1** | Deletes the second event from SoConnect. 
+| |
+**Input 2** | [`efind Class`](#finding-events-efind) followed by `edelete 1`
+**Expected Output 2** | Deletes the first event from the **results of the `efind` _command_**.
+| |
+**Input 3** | `edelete 1-2`
+**Expected Output 3** | Deletes events from index 1 to 2 from the **currently displayed** event list. 
 
+_*The expected changes are similar to [`deleting a contact`](#deleting-a-contact-cdelete)_
 
 #### Editing an event: `eedit`
 
@@ -761,10 +782,9 @@ You must provide **at least one** of the optional _fields_.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-`eedit 2 n/CS2103T Exam dt/CCA t/Hard` | Changes the name of the second event in the **currently displayed** event list to `CS2103T Exam`, deletes the tag `CCA` and adds the tag `Hard`. <br><br> You should see these changes: ![Edit Event](images/demo-screenshots/eeditEx.png)
-
+{: .example-table}
+**Input 1** | `eedit 2 n/CS2103T Exam dt/CCA t/Hard`
+**Expected Output 1** | Changes the name of the second event in the **currently displayed** event list to `CS2103T Exam`, deletes the tag `CCA` and adds the tag `Hard`. <br><br> You should see these changes: ![Edit Event](images/demo-screenshots/eeditEx.png)
 
 
 #### Finding events: `efind`
@@ -798,10 +818,12 @@ The search by `efind` is case-insensitive. e.g. `exams` will match `Exams`.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-`efind meet` | Displays events with names that contain `meet`. <br><br> You should see only this **one event**: ![Find Event 1](images/demo-screenshots/efindEx1.png)
-`efind t/CS2103T Intern` | Displays events with tags that contain `CS2103T` and `Intern`.<br><br> You should see only these **two events**: ![Find Event 2](images/demo-screenshots/efindEx2.png)
+{: .example-table}
+**Input 1** | `efind meet`
+**Expected Output 1** | Displays events with names that contain `meet`. <br><br> You should see only this **one event**: ![Find Event 1](images/demo-screenshots/efindEx1.png)
+| |
+**Input 2** | `efind t/CS2103T Intern`
+**Expected Output 2** | Displays events with tags that contain `CS2103T` and `Intern`.<br><br> You should see only these **two events**: ![Find Event 2](images/demo-screenshots/efindEx2.png)
 
 
 #### Listing all events: `elist`
@@ -824,10 +846,12 @@ You can use `elist` to list all your lectures, tutorials and exams.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-`elist` | Shows **all events** in SoConnect with **all available details** for each event. <br><br> You should see all your events in the [event list](#overview-of-soconnect)
-`elist d/ at/` | Shows **all events** in SoConnect with **only their names, start date and time and description** (if available).<br><br> You should also see the event list displays all events with **only the specified _fields_**: ![List Events](images/demo-screenshots/elistEx.png)
+{: .example-table}
+**Input 1** | `elist`
+**Expected Output 1** | Shows **all available details** of each event in SoConnect. <br><br> You should see **all your events** in the event list.
+| |
+**Input 2** | `elist d/ at/`
+**Expected Output 2** | Shows **only** their names, start date and time and description (if available) of each event in SoConnect.<br><br> You should also see the event list displays all events with **only the specified _fields_**: ![List Events](images/demo-screenshots/elistEx.png)
 
 
 #### Clearing all events: `eclear`
@@ -858,9 +882,9 @@ You can use `eview` to display the details of your basketball training in full.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-`eview 1` | Shows all details of the first event in the **currently displayed** event list **fully**. <br><br> _The expected display is similar to [Viewing a contact](#viewing-a-contact-cview)_
+{: .example-table}
+**Input 1** | `eview 1`
+**Expected Output 1** | Shows all details of the first event in the **currently displayed** event list **fully**. <br><br> _The expected change is similar to [Viewing a contact](#viewing-a-contact-cview)_
 
 
 #### Marking an event: `emark`
@@ -882,9 +906,9 @@ You can use `emark` to mark recurring events like lectures or tutorials.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-`emark 2` | Marks the second event of **currently displayed** event list in SoConnect. <br><br> _The expected display is similar to [marking a contact](#marking-a-contact-cmark)_
+{: .example-table}
+**Input 1** | `emark 2`
+**Expected Output 1** | Marks the second event of **currently displayed** event list in SoConnect. <br><br> _The expected change is similar to [marking a contact](#marking-a-contact-cmark)_
 
 _See Also: [Unmarking an event](#unmarking-an-event-eunmark)_
 
@@ -909,10 +933,14 @@ You can use `eunmark` to unmark events that you no longer frequently attend.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-`eunmark 2` | Unmarks the **second** event of **currently displayed** event list in SoConnect.<br><br> _The expected display is similar to [Unmarking a contact](#unmarking-a-contact-cunmark)_
-`eunmark 2 4` | Unmarks the **second and fourth** event in SoConnect.
+{: .example-table}
+**Input 1** | `emark 2 3` followed by `eunmark 1`
+**Expected Output 1** | Unmarks the first event of **currently displayed** event list in SoConnect.
+| |
+**Input 2** | `emark 1 2 3` followed by `eunmark 1 2`
+**Expected Output 2** | Unmarks the first and second event of **currently displayed** event list in SoConnect.
+
+_*The expected changes are similar to [Unmarking a contact](#unmarking-a-contact-cunmark)_
 
 _See Also: [Marking an event](#marking-an-event-emark)_
 
@@ -949,9 +977,9 @@ You can use `elink` to link your Professors to lectures.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-`elink 2 c/1 c/2` | Links the second event in the **currently displayed** event list to the contacts with index **1 and 2** in the **currently displayed** contact list. <br><br>You should see this in your SoConnect: ![Link](images/demo-screenshots/elinkEx.png)
+{: .example-table}
+**Input 1** | `elink 2 c/1 c/2`
+**Expected Output 1** | Links the second event in the **currently displayed** event list to the contacts with index **1 and 2** in the **currently displayed** contact list. <br><br>You should see this in your SoConnect: ![Link](images/demo-screenshots/elinkEx.png)
 
 _See Also: [Unlinking an event from contacts](#unlinking-an-event-from-contacts-eunlink)_
 
@@ -964,10 +992,12 @@ You can use `eunlink` to unlink professors from lectures.
 
 **Examples:**
 
-Input | Expected Output
---------|------------------
-`eunlink 2 c/1` | Unlinks the second event in the **currently displayed** event list from the first contact in the **currently displayed** contact list. <br><br>You should see this in your SoConnect: ![unlink contact](images/demo-screenshots/eunlinkEx1.png)
-`eunlink 2 c/*` | Unlinks the second event in the **currently displayed** event list from **all of its linked contacts**. <br><br>You should see this in your SoConnect: ![unlink all contacts](images/demo-screenshots/eunlinkEx2.png)
+{: .example-table}
+**Input 1** | `eunlink 2 c/1`
+**Expected Output 1** | Unlinks the second event in the **currently displayed** event list from the first contact in the **currently displayed** contact list. <br><br>You should see this in your SoConnect: ![unlink contact](images/demo-screenshots/eunlinkEx1.png)
+| |
+**Input 2** | `eunlink 2 c/*`
+**Expected Output 2** | Unlinks the second event in the **currently displayed** event list from **all of its linked contacts**. <br><br>You should see this in your SoConnect: ![unlink all contacts](images/demo-screenshots/eunlinkEx2.png)
 
 _See Also: [Linking an event to contacts](#linking-an-event-to-contacts-elink)_
 
