@@ -40,7 +40,7 @@ Here you see an example of a _command_:
 
 ![Command Example](images/demo-screenshots/commandSyntax.png)
 
-Take note of the **three** different parts that form a command:
+Take note of the **three** different parts that form a _command_:
 
 1. **_COMMAND_ WORD**
 
@@ -74,11 +74,11 @@ You may view the various types of _commands_ that you can type in SoConnect [her
 * **Optional** _Fields_ are in **square brackets**.<br>
   e.g. Both `n/John Doe t/friend` and `n/John Doe` (i.e. omit `t/friend`) are valid.
 
-* _Fields_ **preceeding** elipsis `…` can be used **any number of times** or not at all.<br>
+* _Fields_ **preceding** ellipsis `…` can be used **any number of times** or not at all.<br>
   e.g. `[t/TAG]…` can be omitted (i.e. used 0 times), or `t/friend`, `t/friend t/family` (i.e used 3 times), etc.
 
-* The **order** which you specify each pair of **_prefixes_ and _parameters_** does **not** matter.<br>
-  e.g. if the _Command Format_ specifies `n/NAME [p/PHONE_NUMBER]`, you can choose to type `[p/PHONE_NUMBER] n/NAME`.
+* Each pair of **_prefixes_ and _parameters_** can be of **any** order.<br>
+  e.g. if the _Command Format_ specifies `n/NAME [p/PHONE_NUMBER]`, you can either type `n/NAME [p/PHONE_NUMBER]` or`[p/PHONE_NUMBER] n/NAME`.
 
 * If a _parameter_ is expected only once in the [_command format_](#command-summary), and if you specify it multiple times, **only the last occurrence** of the _parameter_ will be taken (unless otherwise stated).<br>
   e.g. if you specify `p/12341234 p/56785678`, only `p/56785678` will be taken.
@@ -166,6 +166,7 @@ Follow this easy 5 step instructions to **set up** SoConnect on your computer.
 
     * `exit` : [Closes](#exiting-soconnect-exit) the SoConnect app.
 
+
 With everything set up, you are now ready to learn the [features](#features) of SoConnect.
 
 _See also: [What happens if my command is invalid](#what-happens-if-my-command-is-invalid)_
@@ -177,6 +178,7 @@ _See also: [What happens if my command is invalid](#what-happens-if-my-command-i
 Just before you learn the [features](#features) of SoConnect, lets look at what makes up the SoConnect display.
 
 ![Labelled SoConnect](images/demo-screenshots/labelledSoconnectOverview.png)
+
 You should see a similar screen display when you open SoConnect!
 
 1. **Menu Bar**
@@ -187,6 +189,7 @@ You should see a similar screen display when you open SoConnect!
 
    Upon clicking `File`, you can choose to:
     1. **Exit** SoConnect <u>or</u>
+       
     2. Open **Calendar** of SoConnect
 
     <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
@@ -387,6 +390,7 @@ For **each** feature, you are provided with:
 * _Command Format_ of the feature
 * Examples of some usages of the feature (All examples use the **initial sample** of contacts and events)
 
+
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
 If you are just <u>starting off</u>, we recommand you learn the **basic** features in each section first.<br>
@@ -416,7 +420,7 @@ This section details all the features and _commands_ available in SoConnect that
 
 #### Adding a contact: `cadd`
 
-It is the start of a new semester, you are taking new modules. You can use `cadd` to add the contacts of the module lecturer `Prof Alex Doe` and your TA `Jon Cheng`.
+At the start of every semester, you may need to take many new modules. You can use _command_ `cadd` to add the contacts of your module lecturer or TA.
 
 **Format:** `cadd n/NAME e/EMAIL [p/PHONE_NUMBER] [a/ADDRESS] [th/TELEGRAM_HANDLE] [z/ZOOM] [t/TAG]…`
 
@@ -424,6 +428,7 @@ It is the start of a new semester, you are taking new modules. You can use `cadd
 
 * You can add a contact with any number of tags (including 0)
 * You **cannot** add a contact with the **same name** as an existing contact.
+* You can refer to the following [**list of _prefixes_**](#list-of-prefixes) to see which _prefix_ to use.
 </div>
 
 **Examples:**
@@ -438,7 +443,7 @@ Input | Expected Output
 
 #### Deleting a contact: `cdelete`
 
-It is the end of the semester, you no longer need to contact your TA `Bernice Yu`. You can use `cdelete` to delete `Bernice Yu`'s contact.
+At the end of the semester, you may no longer need to contact your TA `Bernice Yu`. You can use `cdelete` to delete `Bernice Yu`'s contact.
 
 **Format:** `cdelete INDEX1[-INDEX2]`
 
@@ -450,7 +455,7 @@ It is the end of the semester, you no longer need to contact your TA `Bernice Yu
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
 * `INDEX1` and `INDEX2` **must be a positive integer**. e.g. 1, 2, 3, …
-* `INDEX1` and `INDEX2` must **not be greater** than the **number of contacts** in your contact list.
+* `INDEX1` and `INDEX2` must **not** be greater than the **number of contacts** in the contact list.
 </div>
 
 **Examples:**
@@ -482,6 +487,7 @@ Your CS2103T project group mate `Bernice Yu` recently changed her email address.
 * `INDEX` **must be a positive integer**. e.g. 1, 2, 3, …
 * `INDEX` must **not be greater** than the **number of contacts** in the contact list.
 * You **cannot** edit a contact to the **same name** as an existing contact.
+* You can refer to the following [**list of _prefixes_**](#list-of-prefixes) to see which _prefix_ to use.
 </div>
 
 **Examples:**
@@ -501,11 +507,11 @@ You plan to join a hackathon with your friends, you can use `cfind` to find whic
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
 There are **two** types of contact searches you can do in SoConnect:
-1. If you **do not specify any optional _fields_** in front of the keywords you specify, e.g. `cfind KEYWORD1 KEYWORD2`,
+1. If you **do not specify any _prefix_** in front of the keywords you specify, e.g. `cfind KEYWORD1 KEYWORD2`,
 
    SoConnect will only search the **names** of the contacts using the keywords you provide, **by default**.
 
-2. If you specified optional _field(s)_ before a keyword, e.g. `cfind e/KEYWORD1 p/KEYWORD2`,
+2. If you specified optional a _prefix_ before a keyword, e.g. `cfind e/KEYWORD1 p/KEYWORD2`,
 
    SoConnect will search the emails and phone numbers of the contacts using `KEYWORD1` and `KEYWORD2` respectively.
 </div>
@@ -513,9 +519,9 @@ There are **two** types of contact searches you can do in SoConnect:
 * You must provide **at least one keyword**.
 * You can provide **multiple keywords** for each _fields_ e.g. `cfind John David` or `cfind a/Clementi 123`.
 * You can only **specify each optional _field_ once**.
-* You can the keywords **in any order**. e.g. Both `Hans Bo` and `Bo Hans` will return the same result.
+* You can specify the keywords **in any order**. e.g. Both `Hans Bo` and `Bo Hans` will display the same result.
 * Partial words can be matched e.g. `Han` will match `Hans`.
-* The contact(s) matching at least one keyword you provide will be returned.
+* The contact(s) matching at least one keyword provided will be displayed.
   e.g. `Hans Bo` will return `Hans Gruber` and `Bo Yang`.
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
@@ -527,8 +533,8 @@ The search by `cfind` is case-insensitive. e.g. `hans` will match `Hans`.
 
 Input | Expected Output
 --------|------------------
-`cfind alex david` | Returns contacts of `Alex Yeoh` and `David Li`. <br><br> You should see only these **2 contacts** in the [contact list](#overview-of-soconnect): ![Find Contact 1](images/demo-screenshots/cfindEx1.png)
-`cfind p/926 e/nus.edu` | Returns contacts with phone numbers that contain `926` and with emails that contain `nus.edu`.<br><br>You should see this message in the message box:<br>`2 contacts listed!`<br><br> You should also see only these **2 contacts**: ![Find Contact 2](images/demo-screenshots/cfindEx2.png)
+`cfind alex david` | Displays the contacts of `Alex Yeoh` and `David Li`. <br><br> You should see only these **two contacts** in the [contact list](#overview-of-soconnect): ![Find Contact 1](images/demo-screenshots/cfindEx1.png)
+`cfind p/926 e/nus.edu` | Displays the contacts with phone numbers that contain `926` <u>or</u> with emails that contain `nus.edu`.<br><br> You should see only these **two contacts**: ![Find Contact 2](images/demo-screenshots/cfindEx2.png)
 
 
 #### Listing all contacts: `clist`
@@ -539,10 +545,11 @@ You want to create a telegram group for your CS2101 OP1 presentation. You can us
 
 * Names of contacts are always shown.
 * If you **do not provide any** optional _prefixes_, e.g `clist`, **all available details** of each contact will be shown, **by default**.
-* If you provide optional _prefixes_, it will only show the names and the _fields_ corresponding to specified _prefixes_ for each contact.
+* If you provide optional _prefixes_, SoConnect will only show the names and the _fields_ corresponding to specified _prefixes_ for each contact.
 * You can provide **more than one** optional _prefix_.
 * You can specify the optional _prefix_ **in any order**. e.g. both `clist e/ p/` and `clist p/ e/` will show only the names, email addresses and phone numbers of each contact.
 * _Fields_ of a contact that have **no value will not appear** e.g. if a contact does not have a zoom link, typing `clist z/` will not display the zoom link of this contact.
+* You can refer to the following [**list of _prefixes_**](#list-of-prefixes) to see which _prefix_ you can use.
 
 <div markdown="span" class="alert alert-warning">:exclamation:  **Caution:**
 
@@ -603,6 +610,8 @@ You attend are in a robotics interest group with your Professor`David Li` and yo
 * Marks the contact indexed at `INDEX` and **pins it at the top** of the contact list.
 * You may mark **more than one** contacts by specifying multiple indexes, e.g. `cmark 1 2`, the **order** in which the marked contacts appear will be in **reverse order** to the order you specify their corresponding indexes.
 * `INDEX` refers to the index number shown in the **currently displayed** contact list.
+* You can specify more than one `INDEX`, e.g. `cmark 1 2`
+* If multiple `INDEX` are specifed, the marked contacts will appear in **reverse order** to the order of indexes you specify, e.g. `cmark 1 2` will result in the contact **originally at index 2** pinned **above** the contact **originally at index 1**.
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
@@ -626,9 +635,10 @@ You have completed your CS2103T project and you will not be contacting your grou
 
 **Format:** `cunmark INDEX [INDEX]...`
 
-* Unmarks the contact at `INDEX1`.
-* You may unmark **more than one contact at a time** by specifying multiple indexes, e.g. `cunmark 1 2`, the indexes in which the contacts appear will be **in the order in which** you specify them
+* Unmarks the contact at the specified `INDEX`.
 * `INDEX`  refers to the index number shown in the displayed contact list.
+* You may unmark **more than one contact at a time** by specifying multiple indexes, e.g. `cunmark 1 2`
+* If multiple `INDEX` are specified, the contacts will appear in the **same order** as the specified.
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
