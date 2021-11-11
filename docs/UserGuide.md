@@ -3,10 +3,9 @@ layout: page
 title: SoConnect User Guide
 ---
 
-Made by [School of Computing](https://www.comp.nus.edu.sg/) (SoC) students, for SoC students, SoConnect is a **desktop app for SoC students to manage contacts of Professors and Teaching Assistants, and keep track of noteworthy events.** With SoConnect, you can **save your contacts and events in one location**, and even **link events to multiple contacts**, or **bookmark your favorite contact**.
+Made by [School of Computing](https://www.comp.nus.edu.sg/) (SoC) students, for SoC students, SoConnect is a **desktop app for SoC students to manage contacts of Professors and Teaching Assistants, and keep track of noteworthy events.** As SoC students ourselves, we understand how pack your schedules can get and how busy you are. We hope that with SoConnect, you can **save your contacts and events in one location**, **link related contacts and events** - all with a type of a command. You no longer have to waste time and effort looking for contacts and events from different apps.
 
-SoConnect is **optimized for use via a _Command Line Interface (CLI)_** while still having 
-the benefits of a _Graphical User Interface (GUI)_. If you can type fast, managing your contacts and events will be a **breeze** with SoConnect.
+SoConnect is made for students who love to type. If you can type fast, managing your contacts and events will be a **breeze** with SoConnect.
 
 This user guide will help you to quickly **familiarise yourself with your SoConnect** and so that you can use
 full range of features it offers.
@@ -20,16 +19,20 @@ full range of features it offers.
 
 ## How to use SoConnect User Guide
 
+Before we jump into learning the features, here is a quick overview on how to use this userguide.
+
 * You can click on the titles in the Table of Contents to jump to the section that you are interested in.
 * You may find these icons in this user guide useful when reading this userguide:
     * **:bulb: Tip** provides additional information that might be useful to you.
-    * **:information_source: Note** provides supplementary information that helps you to understand this User Guide.
-    * **:exclamation: Caution** cautions you against certain actions that will lead to undesirable consequences.
+    * **:information_source: Note** provides supplementary information that helps you better understand this User Guide.
+    * **:exclamation: Caution** warns you against doing certain actions that will lead to undesirable consequences.
 * You can find explanations of _italicized_ words in the [Glossary](#glossary).
 * You can refer to the [Command Summary](#command-summary) for a complete overview of all SoConnect features and _commands_.
 
 
 ### How to read _commands_ in SoConnect
+
+Before you learn the different _commands_ in [features](#features), lets learn about what makes up a _command_.
 
 You will see _commands_ throughout this User Guide. Each _command_ has its own [_Command Format_](#command-summary).
 
@@ -49,7 +52,7 @@ Take note of the **three** different parts that form a command:
 
    In addition to the _command_ word,you may need to provide **supplementary information** known as _parameters_.
 
-   Using the same example, you can specify `2` to tell SoConnect to edit information about the contact indexed at **index 2** in the contact list above (i.e.Bernice Yu).
+   Using the same example, you can specify `2` to tell SoConnect to edit information about the contact indexed at **index 2** in the [contact list](#overview-of-soconnect) (i.e. Bernice Yu).
 
 3. **_PREFIX_**
 
@@ -69,9 +72,9 @@ You may view the various types of _commands_ that you can type in SoConnect [her
   e.g. in following this _command format_ `cadd n/NAME`, you can type `cadd n/John Doe` (i.e. provide `John Doe` as the `NAME` _parameter_).
 
 * **Optional** _Fields_ are in **square brackets**.<br>
-  e.g. Both `n/John Doe t/friend` and `n/John Doe` (i.e. omit `t/friend`) are valid commands.
+  e.g. Both `n/John Doe t/friend` and `n/John Doe` (i.e. omit `t/friend`) are valid.
 
-* _Fields_ **preceeding** elipis `…` can be used **any number of times** or not at all.<br>
+* _Fields_ **preceeding** elipsis `…` can be used **any number of times** or not at all.<br>
   e.g. `[t/TAG]…` can be omitted (i.e. used 0 times), or `t/friend`, `t/friend t/family` (i.e used 3 times), etc.
 
 * The **order** which you specify each pair of **_prefixes_ and _parameters_** does **not** matter.<br>
@@ -88,11 +91,11 @@ You may view the various types of _commands_ that you can type in SoConnect [her
 
 </div>
 
-### How do i know the _command_ i entered is valid?
+### How do I know the _command_ I entered is valid?
 
-After you enter a _command_ in SoConnect correctly, you should see a success message displayed in the message box of SoConnect.
+After you enter a _command_ in SoConnect **correctly**, you should see a **success message** displayed in the message box of SoConnect.
 
-For example, after entering [`clist`](#listing-all-contacts-clist), SoConnect will tell you that it has successfully listed all contacts.
+For example, after you enter [`clist`](#listing-all-contacts-clist), SoConnect will tell you that it has successfully listed all contacts.
 
 ![Success Message](images/demo-screenshots/successMessage.png)
 
@@ -115,6 +118,8 @@ For example, if you enter [`cview`](#viewing-a-contact-cview) **without** specif
 ---------------------------------------------------------------------------------------------------------------
 ## Quick start
 
+Follow this easy 5 step instructions to **set up** SoConnect on your computer. 
+
 1. First, ensure you have [Java 11](https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A) or above installed on your computer.
 
    <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
@@ -124,7 +129,7 @@ For example, if you enter [`cview`](#viewing-a-contact-cview) **without** specif
 
 2. Next, download the latest `soconnect.jar` [file](https://github.com/AY2122S1-CS2103T-W15-3/tp/releases) (What is a jar file? Click [here](https://www.lifewire.com/jar-file-4138386) find out more).
 
-3. Copy the file to the folder you want to use as the _home folder_ for your SoConnect.
+3. Then, copy the file to the folder you want to use as the _home folder_ for your SoConnect.
    
    ![_Home Folder_](images/demo-screenshots/homeFolder.png)
 
@@ -161,13 +166,15 @@ For example, if you enter [`cview`](#viewing-a-contact-cview) **without** specif
 
     * `exit` : [Closes](#exiting-soconnect-exit) the SoConnect app.
 
-Refer to the [Features](#features) below for details of each _command_ or [Command Summary](#command-summary) for the _command format_ of each command.
+With everything set up, you are now ready to learn the [features](#features) of SoConnect.
 
 _See also: [What happens if my command is invalid](#what-happens-if-my-command-is-invalid)_
 
 ---------------------------------------------------------------------------------------------------------------
 
 ## Overview of SoConnect
+
+Just before you learn the [features](#features) of SoConnect, lets look at what makes up the SoConnect display.
 
 ![Labelled SoConnect](images/demo-screenshots/labelledSoconnectOverview.png)
 You should see a similar screen display when you open SoConnect!
@@ -366,9 +373,11 @@ Here are the icons you might see under each contact or event:
 *The bookmark icon is **visible** only if the contact <u>or</u> event **has been marked**.
 _See also: [Marking a contact](#marking-a-contact-cmark) and [Marking an event](#marking-an-event-emark)_
 
---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
 ## Features
+
+Now, you are ready to learn some new commands. 
 
 There are **three** main sections to SoConnect Features:
 [Contact Management](#contact-management), [Event Management](#event-management) and [General](#general).
@@ -378,10 +387,13 @@ For **each** feature, you are provided with:
 * _Command Format_ of the feature
 * Examples of some usages of the feature (All examples use the **initial sample** of contacts and events)
 
-If you are just starting off, we recommand you learn the **basic** features first.
-If you want to learn more commands, we welcome you to learn more **advanced** features SoConnect has to offer.
+<div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
---------------------------------------------------------------------------------------------------------------------
+If you are just <u>starting off</u>, we recommand you learn the **basic** features in each section first.<br>
+If you want to <u>learn more commands</u>, we welcome you to learn the more **advanced** features SoConnect has to offer.
+</div>
+
+---------------------------------------------------------------------------------------------------------------
 
 ### Contact Management
 
@@ -418,8 +430,8 @@ It is the start of a new semester, you are taking new modules. You can use `cadd
 
 Input | Expected Output
 ------|------------------
-`cadd n/Alex Doe e/e0123456@u.nus.edu a/COM1 #99-99 th/johnDoe99 t/Professor` | You should also see `Alex Doe` added **at the end** of your [contact list](#overview-of-soconnect): ![New Contact 1](images/demo-screenshots/caddEx1.png)
-`cadd n/ Jon Cheng t/TA e/e7654321@u.nus.edu a/COM1-0201 p/87654321 t/Senior th/jonnyjohnny z/https://nus-sg.zoom.us/j/0123456789?pwd=ABCDEFGHIJKLMNOPDJFHISDFSDH` | You should also see `Jon Cheng` added **at the end** of your [contact list](#overview-of-soconnect): ![New Contact 2](images/demo-screenshots/caddEx2.png)
+`cadd n/Alex Doe e/e0123456@u.nus.edu a/COM1 #99-99 th/johnDoe99 t/Professor` | You should see `Alex Doe` added **at the end** of your [contact list](#overview-of-soconnect): ![New Contact 1](images/demo-screenshots/caddEx1.png)
+`cadd n/ Jon Cheng t/TA e/e7654321@u.nus.edu a/COM1-0201 p/87654321 t/Senior th/jonnyjohnny z/https://nus-sg.zoom.us/j/0123456789?pwd=ABCDEFGHIJKLMNOPDJFHISDFSDH` | You should see `Jon Cheng` added **at the end** of your [contact list](#overview-of-soconnect): ![New Contact 2](images/demo-screenshots/caddEx2.png)
 
 *Index of the newly added contact will be one more than the previous number of contacts.
 
@@ -431,28 +443,28 @@ It is the end of the semester, you no longer need to contact your TA `Bernice Yu
 **Format:** `cdelete INDEX1[-INDEX2]`
 
 * Deletes the contact(s):
-    * at the specified `INDEX1` or
+    * at the specified `INDEX1` <u>or</u>
     * between the specified range from `INDEX1` to `INDEX2` inclusively (if you provide `INDEX2`).
-* `INDEX1` and `INDEX2` refer to the index number shown in the displayed contact list.
+* `INDEX1` and `INDEX2` refer to the index number shown in the displayed [contact list](#overview-of-soconnect).
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
 * `INDEX1` and `INDEX2` **must be a positive integer**. e.g. 1, 2, 3, …
-* `INDEX1` and `INDEX2` must **not be greater** than the **number of contacts** in the contact list.
+* `INDEX1` and `INDEX2` must **not be greater** than the **number of contacts** in your contact list.
 </div>
 
 **Examples:**
 
 Input | Expected Output
 --------|------------------
-[`clist`](#listing-all-contacts-clist) followed by `cdelete 2` | Deletes the second contact in the contact list. <br><br> You should see these messages in the message box: <br> 1. After `clist`: `Listed all contacts` <br> 2. After `cdelete 2`: `Deleted Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]`
-[`cfind Bernice`](#finding-contacts-cfind) followed by `cdelete 1` | Deletes the first contact in the **results of the `cfind` _command_**. <br><br> You should see these messages in the message box: <br> 1. After `cfind Bernice`: `1 contacts listed!` <br> 2. After `cdelete 1`: `Deleted Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]`
-`cdelete 3-5` | Deletes contacts from indexes 3 to 5 (inclusive) from the **currently displayed** contact list. <br><br> You should see these messages in the message box:<br>`Deleted Contact: Charlotte Oliveiro; Email: charlotte@example.com Deleted Contact: David Li; Email: lidavid@comp.nus.edu.sg; Address: COM1-B1-0931; Telegram: lidavid; Tags: [professor][CS2103T] Deleted Contact: Irfan Ibrahim; Email: irfan@example.com; Address: Blk 47 Tampines Street 20, #17-35; Telegram: irfanx; Tags: [classmates]`
+[`clist`](#listing-all-contacts-clist) followed by `cdelete 2` | Deletes the second contact in the contact list.<br><br> 1. After entering `clist`, you should see the full list of contacts in the contact list.<br> 2. After entering `cdelete2`, you should **not** see `Bernice Yu` contact after the operation.
+[`cfind Bernice`](#finding-contacts-cfind) followed by `cdelete 1` | Deletes the first contact in the **`cfind` _command_search results**. <br><br> 1. After entering `cfind Bernice`, you should see only contacts with names containing `Bernice` in the contact list.<br> 2. After entering `cdelete 1`, you should see the first contact in the list in point 1 removed.
+`cdelete 3-5` | Deletes contacts from indexes 3 to 5 (inclusive) from the **currently displayed** contact list. <br><br> You should see the **third, fourth and fifth** contacts (i.e. `Charlotte Oliveiro`, `David Li` and `Irfan Ibrahim`) removed from the contact list.
 
 
 #### Editing a contact: `cedit`
 
-Edits an **existing** contact in SoConnect.
+Your CS2103T project group mate `Bernice Yu` recently changed her email address. You can use `cedit` to update her contact in SoConnect.  
 
 **Format:** `cedit INDEX [n/NAME] [e/EMAIL] [p/PHONE] [a/ADDRESS] [th/TELEGRAM_HANDLE] [z/ZOOM] [dt/TAG_DELETED]… [t/TAG_ADDED]… `
 
@@ -460,9 +472,9 @@ Edits an **existing** contact in SoConnect.
 * `INDEX` refers to the index number shown in the displayed contact list.
 * You must provide **at least one** of the optional _fields_.
 * The input values you provide will be used to update the existing values.
-* You can use `t/` to add a tag.
-* You can remove a specific tag by typing `dt/` followed by the name of the tag that you wish to remove.
-* You can remove all existing tags of a contact by typing `dt/*`.
+* You can use `t/` to **add** a tag.
+* You can **remove** an **existing** tag by typing `dt/` followed by the name of the tag that you wish to remove.
+* You can **remove all** tags of a contact by typing `dt/*`.
 * When editing tags, the tags to be deleted will be removed first, before new tags are added.
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
@@ -476,13 +488,13 @@ Edits an **existing** contact in SoConnect.
 
 Input | Expected Output
 --------|------------------
-`cedit 2 p/91234567 e/agentX@thehightable.com` | Edits the **phone number** and **email address** of the second contact in the **currently displayed** contact list to be `91234567` and `agentX@thehightable.com` respectively. <br> <br>You should see this message in the message box:<br> `Edited Contact: Bernice Yu; Email: agentX@thehightable.com; Phone: 91234567; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should also the following changes: ![Edit Contact 1](images/demo-screenshots/ceditEx1.png)
-`cedit 1 n/Betsy Crower dt/*` | Edits the **name** of the first contact in the **currently displayed** contact list to be `Betsy Crower` and **clears all existing tags**. <br><br>You should see this message in your message box: `Edited Contact: Betsy Crower; Email: alexyeoh@example.com; Phone: 87438807; Address: Blk 30 Geylang Street 29, #06-40; Telegram: yeoh_alex` <br><br> You should also see the following changes: ![Edit Contact 2](images/demo-screenshots/ceditEx2.png)
+`cedit 2 p/91234567 e/agentX@thehightable.com` | Edits the **phone number** and **email address** of the second contact in the **currently displayed** contact list to be `91234567` and `agentX@thehightable.com` respectively. <br><br> You should see the following changes: ![Edit Contact 1](images/demo-screenshots/ceditEx1.png)
+`cedit 1 n/Betsy Crower dt/*` | Edits the **name** of the first contact in the **currently displayed** contact list to be `Betsy Crower` and **clears all existing tags**. <br><br>You should see the following changes: ![Edit Contact 2](images/demo-screenshots/ceditEx2.png)
 
 
 #### Finding contacts: `cfind`
 
-Finds all contacts that contain any of the given keywords that you specify.
+You plan to join a hackathon with your friends, you can use `cfind` to find which of your contacts have nus email so that you can forward them invitation link via nus email.  
 
 **Format:** `cfind [KEYWORD]… [e/KEYWORD…] [p/KEYWORD…] [a/KEYWORD…] [th/KEYWORD…] [z/KEYWORD…] [t/KEYWORD…]`
 
@@ -491,7 +503,7 @@ Finds all contacts that contain any of the given keywords that you specify.
 There are **two** types of contact searches you can do in SoConnect:
 1. If you **do not specify any optional _fields_** in front of the keywords you specify, e.g. `cfind KEYWORD1 KEYWORD2`,
 
-   SoConnect will only search the names of the contacts using the keywords you provide.
+   SoConnect will only search the **names** of the contacts using the keywords you provide, **by default**.
 
 2. If you specified optional _field(s)_ before a keyword, e.g. `cfind e/KEYWORD1 p/KEYWORD2`,
 
@@ -499,7 +511,7 @@ There are **two** types of contact searches you can do in SoConnect:
 </div>
 
 * You must provide **at least one keyword**.
-* You can provide multiple keywords without specifying any optional _fields_ e.g. `cfind John David`.
+* You can provide **multiple keywords** for each _fields_ e.g. `cfind John David` or `cfind a/Clementi 123`.
 * You can only **specify each optional _field_ once**.
 * You can the keywords **in any order**. e.g. Both `Hans Bo` and `Bo Hans` will return the same result.
 * Partial words can be matched e.g. `Han` will match `Hans`.
@@ -515,24 +527,24 @@ The search by `cfind` is case-insensitive. e.g. `hans` will match `Hans`.
 
 Input | Expected Output
 --------|------------------
-`cfind alex david` | Returns contacts of `Alex Yeoh` and `David Li`. <br><br>You should see this message in the message box:<br>`2 contacts listed!`<br><br> You should also see only these **2 contacts**: ![Find Contact 1](images/demo-screenshots/cfindEx1.png)
+`cfind alex david` | Returns contacts of `Alex Yeoh` and `David Li`. <br><br> You should see only these **2 contacts** in the [contact list](#overview-of-soconnect): ![Find Contact 1](images/demo-screenshots/cfindEx1.png)
 `cfind p/926 e/nus.edu` | Returns contacts with phone numbers that contain `926` and with emails that contain `nus.edu`.<br><br>You should see this message in the message box:<br>`2 contacts listed!`<br><br> You should also see only these **2 contacts**: ![Find Contact 2](images/demo-screenshots/cfindEx2.png)
 
 
 #### Listing all contacts: `clist`
 
-Shows **all contacts** in the SoConnect, with all available details by default.
+You want to create a telegram group for your CS2101 OP1 presentation. You can use `clist` to list out the telegram handles of your group mates so that you can add them to the group. 
 
 **Format:** `clist [e/] [p/] [a/] [th/] [z/] [t/]`
 
 * Names of contacts are always shown.
-* If you do not provide any optional _prefixes_, e.g `clist`, all available details of each contact will be shown.
+* If you **do not provide any** optional _prefixes_, e.g `clist`, **all available details** of each contact will be shown, **by default**.
 * If you provide optional _prefixes_, it will only show the names and the _fields_ corresponding to specified _prefixes_ for each contact.
-* You can provide more than one optional _prefix_.
+* You can provide **more than one** optional _prefix_.
 * You can specify the optional _prefix_ **in any order**. e.g. both `clist e/ p/` and `clist p/ e/` will show only the names, email addresses and phone numbers of each contact.
-* _Fields_ of a contact that have no value will not appear e.g. if a contact does not have a zoom link, typing `clist z/` will not display the zoom link of this contact.
+* _Fields_ of a contact that have **no value will not appear** e.g. if a contact does not have a zoom link, typing `clist z/` will not display the zoom link of this contact.
 
-<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
+<div markdown="span" class="alert alert-warning">:exclamation:  **Caution:**
 
 **Do not** add extraneous values after each optional _prefix_ you specify.
 </div>
@@ -541,30 +553,30 @@ Shows **all contacts** in the SoConnect, with all available details by default.
 
 Input | Expected Output
 --------|------------------
-`clist` | Shows **all available details** of each contact in SoConnect. <br><br> You should see this message in the message box:<br> `Listed all contacts`
-`clist e/ p/` | Shows **only the names, email addresses and phone numbers** (if available) of each contact in SoConnect. <br><br> You should see this message in the message box:<br> `Listed all contacts` <br><br> You should also see the contacts list displays **only the specified _fields_**: ![List Contact 1](images/demo-screenshots/clistEx.png)
+`clist` | Shows **all available details** of each contact in SoConnect. <br><br> You should see all your contacts in the [contact list](#overview-of-soconnect): ![Success Message](images/demo-screenshots/successMessage.png)
+`clist e/ p/` | Shows **only the names, email addresses and phone numbers** (if available) of each contact in SoConnect. <br><br> You should see the contacts list displays **only the specified _fields_**: ![List Contact 1](images/demo-screenshots/clistEx.png)
 
 
 #### Clearing all contacts: `cclear`
 
-Clears **all** entries of contacts in SoConnect.
+You have completed your summer internship and you want to remove all the contacts from the internship. You can use `clear` to remove all the contacts from your internship.
 
 **Format:** `cclear`
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 
-This **will not change the events** saved in SoConnect.
+This **will not change the events** saved in SoConnect. 
 </div>
 
 
 #### Viewing a contact: `cview`
 
-Views a contact with all details fully shown.
+You are going over to your friend `Bernice Yu`'s house to discuss your orbital project, you can use `cview` to see her address in full.
 
 **Format:** `cview INDEX`
 
 * displays only the contact at the specified `INDEX`.
-* All truncated details of the contact you want to view will be expanded fully.
+* All **truncated** details of the contact you want to view will be **expanded fully**.
 * `INDEX` refers to the index number shown in the displayed contact list.
 
 <div markdown="block" class="alert alert-primary">
@@ -579,17 +591,17 @@ Views a contact with all details fully shown.
 
 Input | Expected Output
 --------|------------------
-`cview 2` | Shows all details of the second contact of the **currently displayed** in SoConnect **fully**. <br> You should see this message in the message box:<br> `Viewing Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should see this change of your **viewed** contact: ![View Contact](images/demo-screenshots/cviewEx.png)
+`cview 2` | Shows all details of the second contact of the **currently displayed** in SoConnect **fully**. <br><br> You should see this change of your **viewed** contact: ![View Contact](images/demo-screenshots/cviewEx.png)
 
 
 #### Marking a contact: `cmark`
 
-Marks the specified contact(s).
+You attend are in a robotics interest group with your Professor`David Li` and your classmate `Irfan`. You hold weekly meet ups together. You can use `cmark` to mark `Irfan` and `David`'s contact easy reference.
 
 **Format:** `cmark INDEX [INDEX]...`
 
-* Marks the contact at `INDEX` and **pins it at the top** of the contact list.
-* You can specify more than one `INDEX`, e.g. `cmark 1 2`, the order in which the marked contacts appear will be in reverse order to the order you specify their corresponding indexes.
+* Marks the contact indexed at `INDEX` and **pins it at the top** of the contact list.
+* You may mark **more than one** contacts by specifying multiple indexes, e.g. `cmark 1 2`, the **order** in which the marked contacts appear will be in **reverse order** to the order you specify their corresponding indexes.
 * `INDEX` refers to the index number shown in the **currently displayed** contact list.
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
@@ -602,15 +614,15 @@ Marks the specified contact(s).
 
 Input | Expected Output
 --------|------------------
-`cmark 2` | Marks the second contact of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should see `Bernice Yu` **pinned to the top** of your contact list with the **Bookmark Icon**: ![Mark Contact](images/demo-screenshots/cmarkEx1.png)
-`cmark 4 5` | Marks the fourth and fifth contacts of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked contact: Irfan Ibrahim; Email: irfan@example.com; Address: Blk 47 Tampines Street 20, #17-35; Telegram: irfanx; Tags: [classmates] Marked contact: David Li; Email: lidavid@comp.nus.edu.sg; Address: COM1-B1-0931; Telegram: lidavid; Tags: [professor][CS2103T]` <br><br> You should see `Irfan Ibrahim` and `David Li` **pinned to the top** of your contact list in that order with the **Bookmark Icon**: ![Mark Contact](images/demo-screenshots/cmarkEx2.png)
+`cmark 2` | Marks the **second** contact of the **currently displayed** [contact list](#overview-of-soconnect) in SoConnect. <br><br> You should see `Bernice Yu` **pinned to the top** of your contact list with the [**Bookmark Icon**](#icons): ![Mark Contact](images/demo-screenshots/cmarkEx1.png)
+`cmark 4 5` | Marks the **fourth and fifth** contacts of the **currently displayed** contact list in SoConnect. <br><br> You should see `Irfan Ibrahim` and `David Li` **pinned to the top** of your contact list **in that order** with the **Bookmark Icon**: ![Mark Contact](images/demo-screenshots/cmarkEx2.png)
 
 _See also: [Unmarking a contact](#unmarking-a-contact-cunmark)_
 
 
 #### Unmarking a contact: `cunmark`
 
-Unmarks the specified contact(s).
+You have completed your CS2103T project and you will not be contacting your group mates `Alex`, `Bernice` and `Charlotte` as often. You can use `cunmark` to unmark their contacts.  
 
 **Format:** `cunmark INDEX [INDEX]...`
 
@@ -629,8 +641,8 @@ Unmarks the specified contact(s).
 
 Input | Expected Output
 --------|------------------
-[`cmark 2 3`](#marking-a-contact-cmark) followed by `cunmark 1` | Unmarks the first contact of the **currently displayed** contact list in SoConnect. <br><br> You should see these messages in the message box:<br> 1. After `cmark 2 3`: `Marked contact: Charlotte Oliveiro; Email: charlotte@example.com Marked contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br> 2. After `cunmark 1`: `Unmarked contact: Charlotte Oliveiro; Email: charlotte@example.com` <br><br> You should see `Charlotte Oliveiro` moved to the **bottom of your marked contact list** without the **Bookmark Icon**: ![Unmark Contact](images/demo-screenshots/cunmarkEx1.png)
-[`cmark 1 2 3`](#marking-a-contact-cmark) followed by `cunmark 1 2` | Unmarks the first and second contact of the **currently displayed** contact list in SoConnect. <br><br> You should see these messages in the message box:<br> 1. After `cmark 1 2 3`: `Marked contact: Charlotte Oliveiro; Email: charlotte@example.com Marked contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends] Marked contact: Alex Yeoh; Email: alexyeoh@example.com; Phone: 87438807; Address: Blk 30 Geylang Street 29, #06-40; Telegram: yeoh_alex; Tags: [friends]` <br> 2. After `cunmark 1 2`: `Unmarked contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends] Unmarked contact: Charlotte Oliveiro; Email: charlotte@example.com` <br><br> You should see `Bernice Yu` and `Charlotte Oliveiro` moved to the **bottom of your marked contact list** without the **Bookmark Icon**: ![Unmark Contact](images/demo-screenshots/cunmarkEx2.png)
+[`cmark 2 3`](#marking-a-contact-cmark) followed by `cunmark 1` | Unmarks the first contact of the **currently displayed** contact list in SoConnect. <br><br> You should see `Charlotte Oliveiro` moved to the **bottom of your marked contact list** without the **Bookmark Icon**: ![Unmark Contact](images/demo-screenshots/cunmarkEx1.png)
+[`cmark 1 2 3`](#marking-a-contact-cmark) followed by `cunmark 1 2` | Unmarks the first and second contact of the **currently displayed** contact list in SoConnect. <br><br> You should see `Bernice Yu` and `Charlotte Oliveiro` moved to the **bottom of your marked contact list** without the **Bookmark Icon**: ![Unmark Contact](images/demo-screenshots/cunmarkEx2.png)
 
 _See also: [Marking a contact](#marking-a-contact-cmark)_
 
