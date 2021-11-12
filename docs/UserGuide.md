@@ -15,7 +15,9 @@ full range of features it offers.
 * Table of Contents
 {:toc}
 
---------------------------------------------------------------------------------------------------------------------
+
+<div style="page-break-before: always;"></div>
+
 
 ## How to use SoConnect User Guide
 
@@ -29,6 +31,7 @@ Before we jump into learning the [features](#features), here is a quick overview
 * You can find explanations of _italicized_ words in the [Glossary](#glossary).
 * You can refer to the [Command Summary](#command-summary) for a complete overview of all SoConnect features and _commands_.
 
+<div style="page-break-before: always;"></div>
 
 ### How to read _commands_ in SoConnect
 
@@ -62,8 +65,6 @@ Take note of the **three** different parts that form a _command_:
 
    For example, if you want to specify a name parameter, you can type `n/`. SoConnect will recognize that the information following this _prefix_ should be a **name**.
 
-You may view the various types of _commands_ that you can type in SoConnect.
-
 <div markdown="block" class="alert alert-info">
 
 **:information_source: About the _command format_:**<br>
@@ -91,6 +92,9 @@ You may view the various types of _commands_ that you can type in SoConnect.
 
 </div>
 
+<div style="page-break-before: always;"></div>
+
+
 ### How do I know the _command_ I entered is valid?
 
 After you enter a **valid** _command_ in SoConnect, you should see a **success message** displayed in the message box of SoConnect.
@@ -106,6 +110,8 @@ Unsure of where the **message box** is? Click [here](#overview-of-soconnect) to 
 
 <br>
 
+<div style="page-break-before: always;"></div>
+
 ### What happens if my _command_ is invalid?
 
 However, if the _command_ you entered **does not follow the _command format_** specified in [Features](#features), you will see an **error message** in the message box instead.
@@ -115,7 +121,8 @@ For example, if you enter [`cview`](#viewing-a-contact-cview) **without** specif
 
 ![Error Message](images/demo-screenshots/invalidCommand.png)
 
----------------------------------------------------------------------------------------------------------------
+<div style="page-break-before: always;"></div>
+
 ## Quick start
 
 Follow this simple 5-step instructions to **set up** SoConnect on your computer. 
@@ -145,6 +152,7 @@ Follow this simple 5-step instructions to **set up** SoConnect on your computer.
     <div markdown="span" class="alert alert-info">:information_source: **Note:**
    SoConnect comes with some sample contacts and events upon installation.
     </div>
+
     <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
    If SoConnect does not start by double-clicking, you can try this 
    [alternative](#how-to-start-soconnect-using-terminal) way of starting SoConnect.
@@ -175,7 +183,8 @@ _See also: [What happens if my command is invalid](#what-happens-if-my-command-i
 
 With everything set up and working, let's understand the SoConnect [display](#overview-of-soconnect).
 
----------------------------------------------------------------------------------------------------------------
+
+<div style="page-break-before: always;"></div>
 
 ## Overview of SoConnect
 
@@ -185,6 +194,8 @@ Just before you learn the [features](#features) of SoConnect, let's look at what
 
 You should see a similar screen display when you open SoConnect!
 
+<div style="page-break-before: always;"></div>
+
 1. **Menu Bar**
 
    The Menu Bar consists of **two** tabs: `File` and `Help`.
@@ -193,10 +204,7 @@ You should see a similar screen display when you open SoConnect!
 
    Upon clicking `File`, you can choose to:
     1. **Exit** SoConnect <u>or</u>
-       
     2. Open **Calendar** of SoConnect
-   
-    <br>
 
    ![Help Tab](images/demo-screenshots/helpTab.png)
 
@@ -229,6 +237,7 @@ You should see a similar screen display when you open SoConnect!
    Refer to [Icons](#icons) to learn about the different _fields_ that each icon represents in the event list.
 
 
+<div style="page-break-before: always;"></div>
 
 ### Icons
 
@@ -243,6 +252,8 @@ Similarly, you will **always** find these **two** information of each event disp
 2. Event **Name**
 
 ![Event Card](images/demo-screenshots/eventCard.png)
+
+<div style="page-break-before: always;"></div>
 
 Here are the icons you might see in each contact or event:
 
@@ -378,7 +389,9 @@ Here are the icons you might see in each contact or event:
 *The bookmark icon is **visible** only if the contact <u>or</u> event **has been marked**.
 _See also: [Marking a contact](#marking-a-contact-cmark) and [Marking an event](#marking-an-event-emark)_
 
----------------------------------------------------------------------------------------------------------------
+
+<div style="page-break-before: always;"></div>
+
 
 ## Features
 
@@ -399,7 +412,6 @@ If you are just <u>starting off</u>, we recommend that you learn the **basic** f
 If you are <u>feeling adventurous</u>, we welcome you to learn the more **advanced** features SoConnect has to offer.
 </div>
 
----------------------------------------------------------------------------------------------------------------
 
 ### Contact Management
 
@@ -440,8 +452,6 @@ You can use `cadd` to add the contacts of people such as your Professors and tut
 | |
 **Input 2** | `cadd n/ Jon Cheng t/TA e/e7654321@u.nus.edu a/COM1-0201 p/87654321 t/Senior th/jonnyjohnny z/https://nus-sg.zoom.us/j/0123456789?pwd=ABCDEFGHIJKLMNOPDJFHISDFSDH`
 **Expected Output 2** | You should see `Jon Cheng` added **at the end** of your contact list. <br> ![New Contact 2](images/demo-screenshots/caddEx2.png)
-
-* The index of the newly added contact will be one more than the previous number of contacts.
 
 
 #### Deleting a contact: `cdelete`
@@ -501,6 +511,8 @@ You must provide **at least one** of the optional _fields_.
 * You can refer to the following [list of _prefixes_](#list-of-prefixes) to see which _prefix_ to use.
 </div>
 
+<div style="page-break-before: always;"></div>
+
 **Examples:**
 
 {: .example-table}
@@ -510,6 +522,7 @@ You must provide **at least one** of the optional _fields_.
 **Input 2** | `cedit 1 n/Betsy Crower dt/*`
 **Expected Output 2** | Edits the name of the first contact in the **currently displayed** contact list to be `Betsy Crower` and clears all existing tags. <br><br>You should see the following changes: ![Edit Contact 2](images/demo-screenshots/ceditEx2.png)
 
+<div style="page-break-before: always;"></div>
 
 #### Finding contacts: `cfind`
 
@@ -542,15 +555,20 @@ There are **two** types of contact searches you can do in SoConnect:
 The search by `cfind` is case-insensitive. e.g. `hans` will match `Hans`.
 </div>
 
-**Examples:**
+<div style="page-break-before: always;"></div>
+
+**Example:**
 
 {: .example-table}
 **Input 1** | `cfind alex david`
 **Expected Output 1** | Displays the contacts with names that contain `alex` and `david`. <br><br> You should see only these **two contacts** in the contact list: ![Find Contact 1](images/demo-screenshots/cfindEx1.png)
-| |
+
+<div style="page-break-before: always;"></div>
+
 **Input 2** | `cfind p/926 e/nus.edu`
 **Expected Output 2** | Displays the contacts with phone numbers that contain `926` <u>or</u> with emails that contain `nus.edu`.<br><br> You should see only these **two contacts**: ![Find Contact 2](images/demo-screenshots/cfindEx2.png)
 
+<div style="page-break-before: always;"></div>
 
 #### Listing all contacts: `clist`
 
@@ -571,15 +589,19 @@ You can use `clist` to view the list of all contacts.
 Do not add extraneous values after each optional _prefix_ you specify.
 </div>
 
+<div style="page-break-before: always;"></div>
+
 **Examples:**
 
 {: .example-table}
+
 **Input 1** | `clist`
 **Expected Output 1** | Shows **all available details** of each contact in SoConnect. <br><br>You should see **all your contacts** in the contact list.
 | |
 **Input 2** | `clist e/ p/`
 **Expected Output 2** | Shows **only** the names, email addresses and phone numbers (if available) of each contact in SoConnect. <br><br> You should see the contacts list displays **only the specified _fields_**: ![List Contact 1](images/demo-screenshots/clistEx.png)
 
+<div style="page-break-before: always;"></div>
 
 #### Clearing all contacts: `cclear`
 
@@ -611,6 +633,8 @@ You can use `cmark` to mark your favorite contacts, such as Professors and tutor
 * `INDEX` must **not be greater** than the **number of contacts** in the contact list.
 </div>
 
+<div style="page-break-before: always;"></div>
+
 **Examples:**
 
 {: .example-table}
@@ -622,6 +646,7 @@ You can use `cmark` to mark your favorite contacts, such as Professors and tutor
 
 _See also: [Unmarking a contact](#unmarking-a-contact-cunmark)_
 
+<div style="page-break-before: always;"></div>
 
 #### Unmarking a contact: `cunmark`
 
@@ -641,6 +666,8 @@ You can use `cunmark` to unmark marked contacts, such as Professors and tutors a
 *  You must check that the contact indexed at `INDEX` is **initially marked**.
 </div>
 
+<div style="page-break-before: always;"></div>
+
 **Examples:**
 
 {: .example-table}
@@ -652,6 +679,7 @@ You can use `cunmark` to unmark marked contacts, such as Professors and tutors a
 
 _See also: [Marking a contact](#marking-a-contact-cmark)_
 
+<div style="page-break-before: always;"></div>
 
 #### Viewing a contact: `cview`
 
@@ -677,6 +705,7 @@ You can use `cview` to view the full details of a contact. This is particularly 
 **Input 1** | `cview 2`
 **Expected Output 1** | Shows all details of the second contact of the **currently displayed** in SoConnect **fully**. <br><br> You should see this change in your **viewed** contact: ![View Contact](images/demo-screenshots/cviewEx.png)
 
+<div style="page-break-before: always;"></div>
 
 ### Event Management
 
@@ -698,7 +727,7 @@ This section details all the features and _commands_ available in SoConnect that
 * [Linking an event to contacts](#linking-an-event-to-contacts-elink)  
 * [Unlinking an event from contacts](#unlinking-an-event-from-contacts-eunlink)
 
-
+<div style="page-break-before: always;"></div>
 
 #### Adding an event: `eadd`
 
@@ -725,7 +754,7 @@ You can use `eadd` to add your events such as lectures and tutorials.
 **Input 1** | `eadd n/Summer Party at/12-12-2021 15:12 a/123, Clementi Rd, 1234665 t/fun`
 **Expected Output 1** | A new event is added to the bottom of the event list.<br><br> You should also see `Summer Party` **at the end** of your event list: ![New Event](images/demo-screenshots/eaddEx.png)
 
-* Index of the newly added event will be one more than the current number of events.
+<div style="page-break-before: always;"></div>
 
 
 #### Deleting an event: `edelete`
@@ -785,8 +814,10 @@ You must provide **at least one** of the optional _fields_.
 * Start time and End Time should be in the format **dd-MM-yyyy HH:mm** (day-month-year hours:minutes).
 * End Time should be **chronologically after** the Start Time.
 * You **cannot** edit an event to the **same name** as an existing event.
-* * You can refer to the following [list of _prefixes_](#list-of-prefixes) to see which _prefix_ to use.
+* You can refer to the following [list of _prefixes_](#list-of-prefixes) to see which _prefix_ to use.
 </div>
+
+<div style="page-break-before: always;"></div>
 
 **Examples:**
 
@@ -794,6 +825,7 @@ You must provide **at least one** of the optional _fields_.
 **Input 1** | `eedit 2 n/CS2103T Exam dt/CCA t/Hard`
 **Expected Output 1** | Changes the name of the second event in the **currently displayed** event list to `CS2103T Exam`, deletes the tag `CCA` and adds the tag `Hard`. <br><br> You should see these changes: ![Edit Event](images/demo-screenshots/eeditEx.png)
 
+<div style="page-break-before: always;"></div>
 
 #### Finding events: `efind`
 
@@ -826,6 +858,8 @@ There are **two** types of event searches you can do in SoConnect:
 The search by `efind` is case-insensitive. e.g. `exams` will match `Exams`.
 </div>
 
+<div style="page-break-before: always;"></div>
+
 **Examples:**
 
 {: .example-table}
@@ -835,6 +869,7 @@ The search by `efind` is case-insensitive. e.g. `exams` will match `Exams`.
 **Input 2** | `efind t/CS2103T Intern`
 **Expected Output 2** | Displays events with tags that contain `CS2103T` and `Intern`.<br><br> You should see only these **two events**: ![Find Event 2](images/demo-screenshots/efindEx2.png)
 
+<div style="page-break-before: always;"></div>
 
 #### Listing all events: `elist`
 
@@ -855,6 +890,8 @@ You can use `elist` to view the list of all events, such as your lectures, tutor
 Do not add extraneous values after each optional _prefix_ you specify.
 </div>
 
+<div style="page-break-before: always;"></div>
+
 **Examples:**
 
 {: .example-table}
@@ -864,6 +901,8 @@ Do not add extraneous values after each optional _prefix_ you specify.
 **Input 2** | `elist d/ at/`
 **Expected Output 2** | Shows **only** their names, start date and time and description (if available) of each event in SoConnect.<br><br> You should also see the event list displays all events with **only the specified _fields_**: ![List Events](images/demo-screenshots/elistEx.png)
 
+
+<div style="page-break-before: always;"></div>
 
 #### Clearing all events: `eclear`
 
@@ -903,6 +942,8 @@ You can use `emark` to mark noteworthy events, such as recurring lectures and tu
 
 _See Also: [Unmarking an event](#unmarking-an-event-eunmark)_
 
+<div style="page-break-before: always;"></div>
+
 
 #### Unmarking an event: `eunmark`
 
@@ -936,6 +977,7 @@ _*The expected changes are similar to [Unmarking a contact](#unmarking-a-contact
 
 _See Also: [Marking an event](#marking-an-event-emark)_
 
+<div style="page-break-before: always;"></div>
 
 #### Viewing an event: `eview`
 
@@ -961,6 +1003,7 @@ You can use `eview` to display the full details of an event. This is particularl
 **Input 1** | `eview 1`
 **Expected Output 1** | Shows all details of the first event in the **currently displayed** event list **fully**. <br><br> _The expected change is similar to [Viewing a contact](#viewing-a-contact-cview)_
 
+<div style="page-break-before: always;"></div>
 
 #### Sorting events: `esort`
 
@@ -976,6 +1019,7 @@ You can use `esort` to arrange your upcoming events by their start times.
 Events that have ended **will not be shown**
 </div>
 
+<div style="page-break-before: always;"></div>
 
 #### Linking an event to contacts: `elink`
 
@@ -1001,6 +1045,8 @@ You can use `elink` to link your contacts to an event. This can be useful when y
 _See Also: [Unlinking an event from contacts](#unlinking-an-event-from-contacts-eunlink)_
 
 
+<div style="page-break-before: always;"></div>
+
 #### Unlinking an event from contacts: `eunlink`
 
 **Format:** `eunlink EVENT_INDEX c/CONTACT_INDEX [c/CONTACT_INDEX]…`
@@ -1012,12 +1058,15 @@ You can use `eunlink` to remove links between your contacts from an event. This 
 {: .example-table}
 **Input 1** | `eunlink 2 c/1`
 **Expected Output 1** | Unlinks the second event in the **currently displayed** event list from the first contact in the **currently displayed** contact list. <br><br>You should see this in your SoConnect: ![unlink contact](images/demo-screenshots/eunlinkEx1.png)
-| |
+
+<div style="page-break-before: always;"></div>
+
 **Input 2** | `eunlink 2 c/*`
 **Expected Output 2** | Unlinks the second event in the **currently displayed** event list from **all of its linked contacts**. <br><br>You should see this in your SoConnect: ![unlink all contacts](images/demo-screenshots/eunlinkEx2.png)
 
 _See Also: [Linking an event to contacts](#linking-an-event-to-contacts-elink)_
 
+<div style="page-break-before: always;"></div>
 
 ### General
 
@@ -1032,6 +1081,7 @@ This section details all the other features and _commands_ available in SoConnec
 * [Undoing a _command_](#undoing-a-command-undo)
 * [Opening the calendar](#opening-the-calendar-calendar)
 
+<div style="page-break-before: always;"></div>
 
 #### Viewing help: `help`
 
@@ -1058,6 +1108,7 @@ You can use the `exit` command to close the SoConnect app.
 Alternatively, you can exit SoConnect using the top menu bar via `File -> Exit`.
 </div>
 
+<div style="page-break-before: always;"></div>
 
 #### Undoing a _command_: `undo`
 
@@ -1096,6 +1147,7 @@ Expected Output | First **restores the deleted event** in the event list. <br>Th
 
 _See Also: [Undoing a command](#undoing-a-command-undo)_
 
+<div style="page-break-before: always;"></div>
 
 #### Opening the calendar: `calendar`
 
@@ -1110,6 +1162,7 @@ You can use the `calendar` command to display all your events in a calendar.
     * Yearly
       ![calendar](images/demo-screenshots/Calendar.png)
 
+<div style="page-break-before: always;"></div>
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
@@ -1129,7 +1182,7 @@ Any changes made in the calendar window will not be saved.
 Doing so might result in a crash and your data may be lost.
 </div>
 
---------------------------------------------------------------------------------------------------------------------
+<div style="page-break-before: always;"></div>
 
 ## SoConnect Saved Data
 
@@ -1148,7 +1201,7 @@ If your changes to the data file make its [format](https://docs.fileformat.com/w
 SoConnect will **discard all data** and start with an empty data file at the next run.
 </div>
 
---------------------------------------------------------------------------------------------------------------------
+<div style="page-break-before: always;"></div>
 
 ## Others
 
@@ -1178,6 +1231,8 @@ Clickable hyperlinks are <u>underlined in blue</u>
 Referring back to the same image, if you click on the zoom link saved under `Charlotte Oliveiro`,
 SoConnect will open the link on your browser automatically.
 
+<div style="page-break-before: always;"></div>
+
 
 #### Linked Contacts and Events
 
@@ -1198,6 +1253,7 @@ The linked events will be displayed on the event panel on the right.
 Typically, we link an event to a contact if the contact of a **participant** of the event.
 For instance, you can link your professor to the lecture.
 
+<div style="page-break-before: always;"></div>
 
 ### How to start SoConnect using Terminal
 
@@ -1223,7 +1279,8 @@ Proceed only if you cannot start SoConnect using [this](#quick-start) method.
 </div>
 
 
---------------------------------------------------------------------------------------------------------------------
+<div style="page-break-before: always;"></div>
+
 ## List of _Prefixes_
 
 <strong class="contact-heading">Contact Management</strong>
@@ -1239,6 +1296,8 @@ _Prefix_ | _Parameter_ Type
 **`th/`** | Telegram Handle
 **`z/`** | Links/ Websites
 
+<div style="page-break-before: always;"></div>
+
 <strong class="event-heading">Event Management</strong>
 
 _Prefix_ | _Parameter_ Type
@@ -1253,6 +1312,7 @@ _Prefix_ | _Parameter_ Type
 **`t/`** | Tag
 **`z/`** | Links/ Websites
 
+<div style="page-break-before: always;"></div>
 
 ## _Command_ Summary
 
@@ -1269,6 +1329,8 @@ Action | Format, Examples
 **[Mark](#marking-a-contact-cmark)** | `cmark INDEX`<br> e.g. `cmark 2`
 **[Unmark](#unmarking-a-contact-cunmark)** | `cunmark INDEX [INDEX]…`<br> e.g. `cunmark 2` <br> e.g. `cunmark 2 3`
 **[View](#viewing-a-contact-cview)** | `cview INDEX`<br> e.g. `cview 2`
+
+<div style="page-break-before: always;"></div>
 
 <strong class="event-heading">Event Management</strong>
 
@@ -1297,7 +1359,7 @@ Action | Format, Examples
 **[Redo](#redoing-a-command-redo)** | `redo`
 **[Undo](#undoing-a-command-undo)** | `undo`
 
-________________________________________________________________________________________________________________
+<div style="page-break-before: always;"></div>
 
 ## Glossary
 
