@@ -3,7 +3,7 @@ layout: page
 title: SoConnect User Guide
 ---
 
-Made by [School of Computing](https://www.comp.nus.edu.sg/) (SoC) students, for SoC students, SoConnect is a **desktop app for SoC students to manage contacts of Professors and Teaching Assistants, and keep track of noteworthy events.** As SoC students ourselves, we understand how packed your schedules can get and how busy you are. Hence we hope that with SoConnect, you can **save your contacts and events in one location**, **link related contacts and events** - all with a type of a command. You no longer have to waste time and effort looking for contacts and events from different apps.
+Made by [School of Computing](https://www.comp.nus.edu.sg/) (SoC) students, for SoC students, SoConnect is a **desktop app for SoC students to manage contacts of Professors and Teaching Assistants, and keep track of noteworthy events.** As SoC students ourselves, we understand how packed your schedules can get and how busy you are. Hence we hope that with SoConnect, you can **save your contacts and events in one location**, **link related contacts and events** - all with just a simple typing of a command. You no longer have to waste time and effort looking for contacts and events from different apps.
 
 SoConnect is **made for students who love to type**. If you **can type fast**, managing your contacts and events will be a **breeze** with SoConnect.
 
@@ -19,10 +19,10 @@ full range of features it offers.
 
 ## How to use SoConnect User Guide
 
-Before we jump into learning the [features](#features), here is a quick overview on how to use this userguide.
+Before we jump into learning the [features](#features), here is a quick overview on how to use this user guide.
 
 * You can click on the titles in the Table of Contents to jump to the section that you are interested in.
-* You may find these icons in this user guide useful when reading this userguide:
+* You may find these icons in this user guide useful when reading this user guide:
     * **:bulb: Tip** provides additional information that might be useful to you.
     * **:information_source: Note** provides supplementary information that helps you better understand this User Guide.
     * **:exclamation: Caution** warns you against doing certain actions that will lead to undesirable consequences.
@@ -60,7 +60,7 @@ Take note of the **three** different parts that form a _command_:
 
    Each _prefix_ always **ends with a slash** `/`. See the [list of _prefixes_](#list-of-prefixes) for all the _prefixes_ that you can use in SoConnect.
 
-   For example, if you want to specify a name paramter, you can type `n/`. SoConnect will recognise that the information following this _prefix_ should be a **name**.
+   For example, if you want to specify a name parameter, you can type `n/`. SoConnect will recognise that the information following this _prefix_ should be a **name**.
 
 You may view the [various](#features) types of _commands_ that you can type in SoConnect.
 
@@ -118,7 +118,7 @@ For example, if you enter [`cview`](#viewing-a-contact-cview) **without** specif
 ---------------------------------------------------------------------------------------------------------------
 ## Quick start
 
-Follow this simple 5 step instructions to **set up** SoConnect on your computer. 
+Follow this simple 5-step instructions to **set up** SoConnect on your computer. 
 
 1. First, ensure you have [Java 11](https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A) or above installed on your computer.
 
@@ -419,7 +419,7 @@ This section details all the features and _commands_ available in SoConnect that
 
 #### Adding a contact: `cadd`
 
-At the start of every semester, you may need to take many new modules. You can use _command_ `cadd` to add the contacts of your Professors and TAs.
+You can use `cadd` to add the contacts of people such as your Professors and TAs.
 
 **Format:** `cadd n/NAME e/EMAIL [p/PHONE_NUMBER] [a/ADDRESS] [th/TELEGRAM_HANDLE] [z/ZOOM] [t/TAG]…`
 
@@ -439,12 +439,12 @@ At the start of every semester, you may need to take many new modules. You can u
 **Input 2** | `cadd n/ Jon Cheng t/TA e/e7654321@u.nus.edu a/COM1-0201 p/87654321 t/Senior th/jonnyjohnny z/https://nus-sg.zoom.us/j/0123456789?pwd=ABCDEFGHIJKLMNOPDJFHISDFSDH`
 **Expected Output 2** | You should see `Jon Cheng` added **at the end** of your contact list. <br> ![New Contact 2](images/demo-screenshots/caddEx2.png)
 
-* Index of the newly added contact will be one more than the previous number of contacts.
+* The index of the newly added contact will be one more than the previous number of contacts.
 
 
 #### Deleting a contact: `cdelete`
 
-You can use `cdelete` to delete a contact.
+You can use `cdelete` to delete a contact that you may have added mistakenly (or you have cut connections with).
 
 **Format:** `cdelete INDEX1[-INDEX2]`
 
@@ -456,7 +456,7 @@ You can use `cdelete` to delete a contact.
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
 * `INDEX1` and `INDEX2` **must be a positive integer**. e.g. 1, 2, 3, …
-* `INDEX1` and `INDEX2` must **not** be greater than the **number of contacts** in the contact list.
+* `INDEX1` and `INDEX2` must **not be greater** than the **number of contacts** in the contact list.
 </div>
 
 **Examples:**
@@ -474,14 +474,18 @@ You can use `cdelete` to delete a contact.
 
 #### Editing a contact: `cedit`
 
-You can use `cedit` to edit a contact's information.  
+You can use `cedit` to edit the information of your contacts that might have been changed or entered incorrectly.  
 
 **Format:** `cedit INDEX [n/NAME] [e/EMAIL] [p/PHONE] [a/ADDRESS] [th/TELEGRAM_HANDLE] [z/ZOOM] [dt/TAG_DELETED]… [t/TAG_ADDED]… `
 
+<div markdown="span" class="alert alert-primary">:bulb: **Tip:** 
+
+You must provide **at least one** of the optional _fields_.
+</div>
+
 * Edits the contact at the specified `INDEX`.
 * `INDEX` refers to the index number shown in the displayed [contact list](#overview-of-soconnect).
-* The input values you provide will be used to update the existing values.
-* You must provide **at least one** of the optional _fields_.
+* The input values you provide will be used to update the existing _fields_.
 * You can use `t/` to **add** a tag.
 * You can **remove** an **existing** tag by typing `dt/` followed by the name of the tag that you wish to remove.
 * You can **remove all** tags of a contact by typing `dt/*`.
@@ -507,7 +511,7 @@ You can use `cedit` to edit a contact's information.
 
 #### Finding contacts: `cfind`
 
-You can use `cfind` to search for specific contact(s).
+You can use `cfind` to search for specific contact(s) by name or other _fields_.
 
 **Format:** `cfind [KEYWORD]… [e/KEYWORD…] [p/KEYWORD…] [a/KEYWORD…] [th/KEYWORD…] [z/KEYWORD…] [t/KEYWORD…]`
 
@@ -518,7 +522,7 @@ There are **two** types of contact searches you can do in SoConnect:
 
    SoConnect will only search the **names** of the contacts using the keywords you provide, **by default**.
 
-2. If you specified optional a _prefix_ before a keyword, e.g. `cfind e/KEYWORD1 p/KEYWORD2`,
+2. If you specify **any _prefix_** before your keyword(s), e.g. `cfind e/KEYWORD1 p/KEYWORD2`,
 
    SoConnect will search the emails and phone numbers of the contacts using `KEYWORD1` and `KEYWORD2` respectively.
 </div>
@@ -548,11 +552,11 @@ The search by `cfind` is case-insensitive. e.g. `hans` will match `Hans`.
 
 #### Listing all contacts: `clist`
 
-You can use `clist` to list all contacts.
+You can use `clist` to view the list of all contacts.
 
 **Format:** `clist [e/] [p/] [a/] [th/] [z/] [t/]`
 
-* Names of contacts are always shown.
+* Names of contacts are **always** displayed.
 * If you **do not provide any** optional _prefixes_, e.g `clist`, **all available details** of each contact will be shown, **by default**.
 * If you **provide optional _prefixes_**, SoConnect will only show the **names and the corresponding _fields_** of those _prefixes_ for each contact.
 * You can provide **more than one** optional _prefix_.
@@ -560,7 +564,7 @@ You can use `clist` to list all contacts.
 * _Fields_ of a contact that have **no value will not appear** e.g. if a contact does not have a zoom link, typing `clist z/` will not display the zoom link of this contact.
 * You can refer to the following [**list of _prefixes_**](#list-of-prefixes) to see which _prefix_ you can use.
 
-<div markdown="span" class="alert alert-warning">:exclamation:  **Caution:**
+<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 
 **Do not** add extraneous values after each optional _prefix_ you specify.
 </div>
@@ -577,7 +581,7 @@ You can use `clist` to list all contacts.
 
 #### Clearing all contacts: `cclear`
 
-You can use `cclear` to clear all contacts.
+You can use `cclear` to delete all contacts.
 
 **Format:** `cclear`
 
@@ -589,11 +593,11 @@ This **will not change the events** saved in SoConnect.
 
 #### Viewing a contact: `cview`
 
-You can use `cview` to view a contact.
+You can use `cview` to view the full details of a contact. This is particularly useful if your contact has a very long _field_, like a long address or long website.
 
 **Format:** `cview INDEX`
 
-* displays only the contact at the specified `INDEX`.
+* Displays only the contact at the specified `INDEX`.
 * All **truncated** details of the contact you want to view will be **expanded fully**.
 * `INDEX` refers to the index number shown in the displayed contact list.
 
@@ -614,7 +618,7 @@ You can use `cview` to view a contact.
 
 #### Marking a contact: `cmark`
 
-You can use `cmark` to mark contacts of your Professors and TAs.
+You can use `cmark` to mark your favorite contacts, such as Professors and TAs of the modules you are taking for the current semester.
 
 **Format:** `cmark INDEX [INDEX]...`
 
@@ -644,7 +648,7 @@ _See also: [Unmarking a contact](#unmarking-a-contact-cunmark)_
 
 #### Unmarking a contact: `cunmark`
 
-You can use `cunmark` to unmark marked contacts.
+You can use `cunmark` to unmark marked contacts, such as Professors and TAs after you have completed the semester.
 
 **Format:** `cunmark INDEX [INDEX]...`
 
@@ -697,7 +701,7 @@ This section details all the features and _commands_ available in SoConnect that
 
 #### Adding an event: `eadd`
 
-You can use `eadd` to add your lectures and tutorials.
+You can use `eadd` to add your events such as lectures and tutorials.
 
 **Format:** `eadd n/NAME at/START_TIME [end/END_TIME] [d/DESCRIPTION] [a/ADDRESS] [z/ZOOM] [t/TAG]…`
 
@@ -709,7 +713,7 @@ You can use `eadd` to add your lectures and tutorials.
 
 <div markdown="block" class="alert alert-info">:information_source: **Note:**
 
-* Start time and End Time should be of format **dd-MM-yyyy HH:m** (date-MONTH-year HOUR:minute in 24-hour format).
+* Start time and End Time should be of format **dd-MM-yyyy HH:m** (day-month-year hours:minutes).
 * End Time should be **chronologically after** the Start Time.
 </div>
 
@@ -724,7 +728,7 @@ You can use `eadd` to add your lectures and tutorials.
 
 #### Deleting an event: `edelete`
 
-You can use `edelete` to delete outdated events.
+You can use `edelete` to delete events that are outdated or added mistakenly.
 
 **Format:** `edelete INDEX1[-INDEX2]`
 
@@ -749,13 +753,13 @@ You can use `edelete` to delete outdated events.
 **Expected Output 2** | Deletes the first event from the **results of the `efind` _command_**.
 | |
 **Input 3** | `edelete 1-2`
-**Expected Output 3** | Deletes events from index 1 to 2 from the **currently displayed** event list. 
+**Expected Output 3** | Deletes events from index **1 to 2 (inclusive)** from the **currently displayed** event list. 
 
 _*The expected changes are similar to [`deleting a contact`](#deleting-a-contact-cdelete)_
 
 #### Editing an event: `eedit`
 
-You can use `eedit` to update the information of your events.
+You can use `eedit` to update the information of your events that might have been changed or entered incorrectly.
 
 **Format:** `eedit INDEX [n/NAME] [at/START_TIME] [end/END_TIME] [d/DESCRIPTION] [a/ADDRESS] [z/ZOOM] [dt/TAG_DELETED]…​ [t/TAG_ADDED]…`
 
@@ -766,18 +770,19 @@ You must provide **at least one** of the optional _fields_.
 
 * Edits the event at the specified `INDEX`.
 * `INDEX` refers to the index number shown in the displayed [event list](#overview-of-soconnect).
-* The values you provide will be used to update to the existing fields.
-* You can use `t/` to add a tag.
-* You can remove an **existing** tag by typing `dt/` followed by the name of the tag that you wish to remove.
-* You can remove **all tags** of an event by typing `dt/*`.
+* The values you provide will be used to update to the existing _fields_.
+* You can use `t/` to **add** a tag.
+* You can **remove** an **existing** tag by typing `dt/` followed by the name of the tag that you wish to remove.
+* You can **remove all tags** of an event by typing `dt/*`.
 * When editing tags, the tags to be deleted will be removed first, before new tags are added.
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
 * `INDEX` **must be a positive integer**. e.g. 1, 2, 3, …
-* Start time and End Time should be of format **dd-MM-yyyy HH:mm** (date-MONTH-year HOUR:minute in 24-hour format).
+* Start time and End Time should be of format **dd-MM-yyyy HH:mm** (day-month-year hours:minutes).
 * End Time should be **chronologically after** the Start Time.
 * You **cannot** edit an event to the **same name** as an existing event.
+* * You can refer to the following [**list of _prefixes_**](#list-of-prefixes) to see which _prefix_ to use.
 </div>
 
 **Examples:**
@@ -789,26 +794,28 @@ You must provide **at least one** of the optional _fields_.
 
 #### Finding events: `efind`
 
-You can use `efind` to see how many meetings you have upcoming.
+You can use `efind` to search for specific event(s) by name or other _fields_.
 
 **Format:** `efind [KEYWORD]… [at/KEYWORD…] [end/KEYWORD…] [d/KEYWORD…] [a/KEYWORD…] [z/KEYWORD…] [t/KEYWORD…]`
+
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
 There are **two** types of event searches you can do in SoConnect:
-1. If you **do not specify any optional _fields_ before your keyword(s)**, e.g. `efind KEYWORD1 KEYWORD2`,
+1. If you **do not specify any _prefix_** in front of the keywords you specify, e.g. `efind KEYWORD1 KEYWORD2`,
 
-   SoConnect will use the keyword(s) you provide to search the **names** of the events **by default**.
+   SoConnect will only search the **names** of the events using the keywords you provide, **by default**.
 
 2. If you specify **any _prefix_** before your keyword(s), e.g. `efind a/KEYWORD1 d/KEYWORD2`,
 
-   You will search the addresses and descriptions of the events based on `KEYWORD1` and `KEYWORD2` respectively.
+   SoConnect will search the addresses and descriptions of the events using `KEYWORD1` and `KEYWORD2` respectively.
 </div>
 
 * You need to provide **at least one keyword**.
-* You can provide **multiple keywords** for each _field_.
+* You can provide **multiple keywords** for each _field_ e.g. `efind Test Exam` or `efind d/study revise`.
 * You can only **specify each optional _field_ once**.
+* * You can specify the keywords **in any order**. e.g. Both `Test Exam` and `Exam Test` will display the same result.
 * Partial words can be matched e.g. `Exa` will match `CS2103T Exam`.
-* Events matching at least one keyword will be returned.
+* The events(s) matching at least one keyword provided will be displayed.
   e.g. `Exam Hard` will return `Hard Exam`, `CS1101S Exams`.
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
@@ -828,16 +835,17 @@ The search by `efind` is case-insensitive. e.g. `exams` will match `Exams`.
 
 #### Listing all events: `elist`
 
-You can use `elist` to list all your lectures, tutorials and exams.
+You can use `elist` to view the list of all events, such as your lectures, tutorials and exams.
 
 **Format:** `elist [at/] [end/] [d/] [a/] [z/] [t/]`
 
 * Event names are **always** displayed.
-* If you **do not provide any optional _prefixes_**, e.g. `elist` , all available details of each event will be displayed, **by default**.
-* If you **provide optional _prefixes_**, only the **names and the corresponding _fields_** for each event will be shown.
+* If you **do not provide any** optional _prefixes_, e.g. `elist` , all available details of each event will be shown, **by default**.
+* If you **provide optional _prefixes_**, SoConnect will only show the **names and the corresponding _fields_** for each event.
 * You can provide **more than one** optional _prefixes_.
-* The **order** you provide the _prefixes_ **does not matter**. e.g. both `elist d/ at/` and `elist at/ d/` will only show the names, descriptions and starting times of each event.
-* _Fields_ of an event that have no value will not be shown.
+* You can specify the optional _prefix_ **in any order**. e.g. both `elist d/ at/` and `elist at/ d/` will only show the names, descriptions and starting times of each event.
+* _Fields_ of a contact that have **no value will not appear** e.g. if an event does not have a zoom link, typing `elist z/` will not display the zoom link of this event.
+* You can refer to the following [**list of _prefixes_**](#list-of-prefixes) to see which _prefix_ you can use.
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 
@@ -856,28 +864,32 @@ You can use `elist` to list all your lectures, tutorials and exams.
 
 #### Clearing all events: `eclear`
 
-You can use `eclear` to clear all events.
+You can use `eclear` to delete all events.
 
 **Format:** `eclear`
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
-This will not change the contacts saved in SoConnect. 
+
+This **will not change the contacts** saved in SoConnect. 
 </div>
 
 
 #### Viewing an event: `eview`
 
-You can use `eview` to display the details of your basketball training in full.
+You can use `eview` to display the full details of an event. This is particularly useful if your event has a very long _field_, like a long address or long description.
 
 **Format:** `eview INDEX`
 
-* Views the event at the specified `INDEX`.
+* Displays only the event at the specified `INDEX`.
+* All **truncated** details of the event you want to view will be **expanded fully**.
 * `INDEX` refers to the index number shown in the displayed event list.
-* All truncated details of the event will be **shown fully**.
 
-<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
+<div markdown="block" class="alert alert-primary">
 
-`INDEX` **must be a positive integer**. e.g. 1, 2, 3, …
+**:bulb: Tip:** <br>
+* `INDEX` **must be a positive integer**. e.g. 1, 2, 3, … <br>
+* `INDEX` must **not be greater** than the **number of events** in the event list.
+
 </div>
 
 **Examples:**
@@ -889,40 +901,42 @@ You can use `eview` to display the details of your basketball training in full.
 
 #### Marking an event: `emark`
 
-You can use `emark` to mark recurring events like lectures or tutorials.
+You can use `emark` to mark noteworthy events, such as recurring lectures and tutorials of the modules you are taking for the current semester.
 
 **Format:** `emark INDEX [INDEX]…`
 
-* Marks the event at `INDEX` and **pins it to the top** of the event list.
-* If you wish to mark **more than one event**, you can specify multiple indexes, e.g. `emark 1 2`,
-* the marked events will appear in **reverse order** to the order you specify their corresponding indexes.
+* Marks the event indexed at `INDEX` and **pins it at the top** of the [event list](#overview-of-soconnect).
 * `INDEX` refers to the index number shown in the **currently displayed** event list.
+* You may mark **more than one** events by specifying multiple indexes, e.g. `emark 1 2`.
+* Note that the marked events appear in **reverse order** to the order in which you specify their corresponding indexes. e.g. `emark 1 2` will result in the event **originally at index 2** pinned **above** the event **originally at index 1** (for an illustration, see example 2 in [Marking a contact](#marking-a-contact-cmark)).
 
-<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 
-`INDEX` **must be a positive integer**, e.g. 1, 2, 3,…<br>
-`INDEX` must **not be greater** than the **number of events** in the event list.
+<div markdown="block" class="alert alert-primary">:bulb: **Tip:**
+
+* `INDEX` **must be a positive integer**, e.g. 1, 2, 3,…
+* `INDEX` must **not be greater** than the **number of events** in the event list.
 </div>
 
 **Examples:**
 
 {: .example-table}
 **Input 1** | `emark 2`
-**Expected Output 1** | Marks the second event of **currently displayed** event list in SoConnect. <br><br> _The expected change is similar to [marking a contact](#marking-a-contact-cmark)_
+**Expected Output 1** | Marks the second event of **currently displayed** event list in SoConnect. <br><br> _The expected change is similar to [Marking a contact](#marking-a-contact-cmark)_
 
 _See Also: [Unmarking an event](#unmarking-an-event-eunmark)_
 
 
 #### Unmarking an event: `eunmark`
 
-You can use `eunmark` to unmark events that you no longer frequently attend.
+You can use `eunmark` to unmark marked events, such as events that you no longer frequently attend.
 
 **Format:** `eunmark INDEX [INDEX]...`
 
-* Unmarks the event at `INDEX`.
-* You wish to unmark **more than one event** by specifying multiple indexes, e.g. `eunmark 1 2`
-* the indexes in which the events appear will be **in the order in which** you specify them.
+* Unmarks the event at the specified `INDEX`.
 * `INDEX` refers to the index number shown in the displayed [event list](#overview-of-soconnect).
+* You may unmark **more than one event at a time** by specifying multiple indexes, e.g. `eunmark 1 2`
+* If multiple `INDEX` are specified, the events will appear in the **same order** as the specified (for an illustration see example 2 in [Unmarking a contact](#unmarking-a-contact-cunmark)).
+
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
@@ -962,7 +976,7 @@ Events that have ended **will not be shown**
 
 #### Linking an event to contacts: `elink`
 
-You can use `elink` to link your Professors to lectures.
+You can use `elink` to link your contacts to an event. This can be useful when you want to indicate the participants of an event, e.g. you can link your professors in the contact list to your lecture in the event list.
 
 **Format:** `elink EVENT_INDEX c/CONTACT_INDEX [c/CONTACT_INDEX]…`
 
@@ -988,7 +1002,7 @@ _See Also: [Unlinking an event from contacts](#unlinking-an-event-from-contacts-
 
 **Format:** `eunlink EVENT_INDEX c/CONTACT_INDEX [c/CONTACT_INDEX]…`
 
-You can use `eunlink` to unlink professors from lectures.
+You can use `eunlink` to remove links between your contacts from an event. This can be useful if one or more of your contacts are no longer part of the event, so you can use `eunlink` to remove these links.
 
 **Examples:**
 
@@ -1018,7 +1032,7 @@ This section details all the other features and _commands_ available in SoConnec
 
 #### Viewing help: `help`
 
-You can use `help` command whenever you are stuck.
+You can use `help` command whenever you are unsure of the _command format_.
 
 **Format:** `help`
 
@@ -1147,12 +1161,11 @@ empty data file SoConnect creates on the other Computer.
 ![clickable links](images/demo-screenshots/clickableLinkExample.png)
 
 **Q**: How do I copy the email address of a contact?<br>
-**A**: You can copy any specific details of a contact or an event just by clicking on that detail! <br>
+**A**: You can copy any specific details of a contact or an event just by clicking on that detail. <br>
 As shown on the image above, clicking on the `email` of `Charlotte Oliveiro` will copy her Email Address.
 
 **Q**: Can SoConnect automatically open a hyperlink on my browser?<br>
-**A**: You can open any hyperlinks that you have included in a contact or in an event. This includes
-telegram handles and Zoom meeting links.<br>
+**A**: You can open any hyperlinks that you have included in a contact or in an event. This includes telegram handles and Zoom meeting links.<br>
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 
@@ -1160,7 +1173,7 @@ Clickable hyperlinks are <u>underlined in blue</u>
 </div>
 
 Referring back to the same image, if you click on the zoom link saved under `Charlotte Oliveiro`,
-SoConnect will help you open the link on your browser automatically.
+SoConnect will open the link on your browser automatically.
 
 
 #### Linked Contacts and Events
@@ -1180,7 +1193,7 @@ The linked events will be displayed on the event panel on the right.
 **Q**: What is the purpose of using links?<br>
 **A**: Links are a form of **relationship between the contacts and the events** saved in SoConnect.
 Typically, we link an event to a contact if the contact of a **participant** of the event.
-For instance, you can link your *professor* to the lecture.
+For instance, you can link your professor to the lecture.
 
 
 ### How to start SoConnect using Terminal
@@ -1203,6 +1216,7 @@ Proceed only if you cannot start SoConnect using [this](#quick-start) method.
   [check your Java version](https://www.java.com/en/download/help/version_manual.html)
   again and make sure it is version 11.
 * [Download Java 11](https://docs.oracle.com/en/java/javase/11/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A) if you have not done so.
+* Still not working? You may [contact](./AboutUs.html) the development team and report the issue.
 </div>
 
 
@@ -1287,7 +1301,7 @@ ________________________________________________________________________________
 Word | Explanation
 --------|------------------
 **Command Line Interface (CLI)** | Text-based application where users interact with the application by **typing in texts/ commands**.
-**Command** | A string of words and characters you type to perform an action, each command has its own **_Command format_**.
+**Command** | A sequence of words and characters you type to perform an action, each command has its own **_Command format_**.
 **Command Format** | The structure that a _command_ must abide by for it to be executed.
 **Parameter(s)** | Information supplied by the user to the application when executing certain _commands_.
 **Prefix** | A tag, consisting of a slash - "/" following one or a few characters to denote information about a certain **_field_**.
