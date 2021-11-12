@@ -683,7 +683,7 @@ _See also: [Marking a contact](#marking-a-contact-cmark)_
 
 #### Viewing a contact: `cview`
 
-You can use `cview` to view the full details of a contact. This is particularly useful if your contact has a very long _field_, like a long address or a long website.
+`cview` is particularly useful if your contacts have very long _fields_, like long addresses or emails that are truncated.
 
 **Format:** `cview INDEX`
 
@@ -981,7 +981,7 @@ _See Also: [Marking an event](#marking-an-event-emark)_
 
 #### Viewing an event: `eview`
 
-You can use `eview` to display the full details of an event. This is particularly useful if your event has a very long _field_, like a long address or long description.
+`eview` is particularly useful if your events have very long _fields_, like long addresses or long descriptions that are truncated.
 
 **Format:** `eview INDEX`
 
