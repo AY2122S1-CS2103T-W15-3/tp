@@ -683,7 +683,7 @@ _See also: [Marking a contact](#marking-a-contact-cmark)_
 
 #### Viewing a contact: `cview`
 
-You can use `cview` to view the full details of a contact. This is particularly useful if your contact has a very long _field_, like a long address or a long website.
+You can use `cview` to view the full details of a contact if your contact has very long _fields_, like a long address or a long website.
 
 **Format:** `cview INDEX`
 
@@ -702,8 +702,8 @@ You can use `cview` to view the full details of a contact. This is particularly 
 **Examples:**
 
 {: .example-table}
-**Input 1** | `cview 2`
-**Expected Output 1** | Shows all details of the second contact of the **currently displayed** in SoConnect **fully**. <br><br> You should see this change in your **viewed** contact: ![View Contact](images/demo-screenshots/cviewEx.png)
+**Input** | `cview 2`
+**Expected Output** | Shows all details of the second contact of the **currently displayed** in SoConnect **fully**. <br><br> You should see this change in your **viewed** contact: ![View Contact](images/demo-screenshots/cviewEx.png)
 
 <div style="page-break-before: always;"></div>
 
@@ -751,8 +751,8 @@ You can use `eadd` to add your events such as lectures and tutorials.
 **Examples:**
 
 {: .example-table}
-**Input 1** | `eadd n/Summer Party at/12-12-2021 15:12 a/123, Clementi Rd, 1234665 t/fun`
-**Expected Output 1** | A new event is added to the bottom of the event list.<br><br> You should also see `Summer Party` **at the end** of your event list: ![New Event](images/demo-screenshots/eaddEx.png)
+**Input** | `eadd n/Summer Party at/12-12-2021 15:12 a/123, Clementi Rd, 1234665 t/fun`
+**Expected Output** | A new event is added to the bottom of the event list.<br><br> You should also see `Summer Party` **at the end** of your event list: ![New Event](images/demo-screenshots/eaddEx.png)
 
 <div style="page-break-before: always;"></div>
 
@@ -822,8 +822,8 @@ You must provide **at least one** of the optional _fields_.
 **Examples:**
 
 {: .example-table}
-**Input 1** | `eedit 2 n/CS2103T Exam dt/CCA t/Hard`
-**Expected Output 1** | Changes the name of the second event in the **currently displayed** event list to `CS2103T Exam`, deletes the tag `CCA` and adds the tag `Hard`. <br><br> You should see these changes: ![Edit Event](images/demo-screenshots/eeditEx.png)
+**Input** | `eedit 2 n/CS2103T Exam dt/CCA t/Hard`
+**Expected Output** | Changes the name of the second event in the **currently displayed** event list to `CS2103T Exam`, deletes the tag `CCA` and adds the tag `Hard`. <br><br> You should see these changes: ![Edit Event](images/demo-screenshots/eeditEx.png)
 
 <div style="page-break-before: always;"></div>
 
@@ -937,9 +937,10 @@ You can use `emark` to mark noteworthy events, such as recurring lectures and tu
 **Examples:**
 
 {: .example-table}
-**Input 1** | `emark 2`
-**Expected Output 1** | Marks the second event of the **currently displayed** event list in SoConnect. <br><br> _The expected change is similar to [Marking a contact](#marking-a-contact-cmark)_
+**Input** | `emark 2`
+**Expected Output** | Marks the second event of the **currently displayed** event list in SoConnect.
 
+_The expected change is similar to [Marking a contact](#marking-a-contact-cmark)_
 _See Also: [Unmarking an event](#unmarking-an-event-eunmark)_
 
 <div style="page-break-before: always;"></div>
@@ -981,7 +982,7 @@ _See Also: [Marking an event](#marking-an-event-emark)_
 
 #### Viewing an event: `eview`
 
-You can use `eview` to display the full details of an event. This is particularly useful if your event has a very long _field_, like a long address or long description.
+You can use `eview` to display the full details of an event if your event has very long _fields_, like a long address or a long description.
 
 **Format:** `eview INDEX`
 
@@ -1000,8 +1001,10 @@ You can use `eview` to display the full details of an event. This is particularl
 **Examples:**
 
 {: .example-table}
-**Input 1** | `eview 1`
-**Expected Output 1** | Shows all details of the first event in the **currently displayed** event list **fully**. <br><br> _The expected change is similar to [Viewing a contact](#viewing-a-contact-cview)_
+**Input** | `eview 1`
+**Expected Output** | Shows all details of the first event in the **currently displayed** event list **fully**.
+
+_The expected change is similar to [Viewing a contact](#viewing-a-contact-cview)_
 
 <div style="page-break-before: always;"></div>
 
@@ -1039,8 +1042,8 @@ You can use `elink` to link your contacts to an event. This can be useful when y
 **Examples:**
 
 {: .example-table}
-**Input 1** | `elink 2 c/1 c/2`
-**Expected Output 1** | Links the second event in the **currently displayed** event list to the contacts with index **1 and 2** in the **currently displayed** contact list. <br><br>You should see this in your SoConnect: ![Link](images/demo-screenshots/elinkEx.png)
+**Input** | `elink 2 c/1 c/2`
+**Expected Output** | Links the second event in the **currently displayed** event list to the contacts with index **1 and 2** in the **currently displayed** contact list. <br><br>You should see this in your SoConnect: ![Link](images/demo-screenshots/elinkEx.png)
 
 _See Also: [Unlinking an event from contacts](#unlinking-an-event-from-contacts-eunlink)_
 
@@ -1119,8 +1122,8 @@ You can use the `undo` command to remove an undesired change.
 **Examples:**
 
 {: .example-table}
-Input | [`cadd n/John Doe e/john@gmail.com`](#adding-a-contact-cadd) followed by `undo`
-Expected Output | **Removes the added** contact from the contact list.
+**Input** | [`cadd n/John Doe e/john@gmail.com`](#adding-a-contact-cadd) followed by `undo`
+**Expected Output** | **Removes the added** contact from the contact list.
 
 _See Also: [Redoing a command](#redoing-a-command-redo)_
 
@@ -1142,8 +1145,8 @@ You can use the `redo` command to restore a change that you accidentally undo.
 **Examples:**
 
 {: .example-table}
-Input | [`edelete 1`](#deleting-an-event-edelete) followed by [`undo`](#undoing-a-command-undo) then `redo`
-Expected Output | First **restores the deleted event** in the event list. <br>Then `redo` will **delete the same event again**.
+**Input** | [`edelete 1`](#deleting-an-event-edelete) followed by [`undo`](#undoing-a-command-undo) then `redo`
+**Expected Output** | First **restores the deleted event** in the event list. <br>Then `redo` will **delete the same event again**.
 
 _See Also: [Undoing a command](#undoing-a-command-undo)_
 
