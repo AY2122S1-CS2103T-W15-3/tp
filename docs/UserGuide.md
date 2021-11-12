@@ -498,7 +498,7 @@ You must provide **at least one** of the optional _fields_.
 * `INDEX` **must be a positive integer**. e.g. 1, 2, 3, …
 * `INDEX` must **not be greater** than the **number of contacts** in the contact list.
 * You **cannot** edit a contact to the **same name** as an existing contact.
-* You can refer to the following [**list of _prefixes_**](#list-of-prefixes) to see which _prefix_ to use.
+* You can refer to the following [list of _prefixes_](#list-of-prefixes) to see which _prefix_ to use.
 </div>
 
 **Examples:**
@@ -785,7 +785,7 @@ You must provide **at least one** of the optional _fields_.
 * Start time and End Time should be in the format **dd-MM-yyyy HH:mm** (day-month-year hours:minutes).
 * End Time should be **chronologically after** the Start Time.
 * You **cannot** edit an event to the **same name** as an existing event.
-* * You can refer to the following [**list of _prefixes_**](#list-of-prefixes) to see which _prefix_ to use.
+* * You can refer to the following [list of _prefixes_](#list-of-prefixes) to see which _prefix_ to use.
 </div>
 
 **Examples:**
