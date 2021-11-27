@@ -3,6 +3,7 @@ layout: page
 title: SoConnect User Guide
 ---
 
+<!-- @@author Gordon25 -->
 Made by [School of Computing](https://www.comp.nus.edu.sg/) (SoC) students, for SoC students, SoConnect is a **desktop app for SoC students to manage contacts
 of Professors and Teaching Assistants, and keep track of noteworthy events.** With SoConnect, you can **save 
 your contacts and events in one location**, and even **link events to multiple contacts**, or **bookmark
@@ -11,6 +12,7 @@ your favorite contact**.
 SoConnect is **optimized for use via a _Command Line Interface (CLI)_** while still having 
 the benefits of a _Graphical User Interface (GUI)_. If you can type fast, managing your contacts will be
 **very easy** with SoConnect.
+<!-- @@author -->
 
 This user guide will help you to familiarise yourself with your SoConnect quickly and teach you the
 full range of features it offers.
@@ -138,6 +140,7 @@ SoConnect will tell you that the _Command Format_ is invalid.
    SoConnect comes with some sample contacts and events upon installation.
     </div>
     <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
+<!-- @@author Gordon25 -->
    If SoConnect does not start by double-clicking, you can check this 
    [alternative](#how-to-start-soconnect-using-terminal) way of starting SoConnect.
     </div>
@@ -148,6 +151,8 @@ SoConnect will tell you that the _Command Format_ is invalid.
    Unsure of where to find the **_command_ box**? Click [here](#overview-of-soconnect) to check out the
    overview of different components in SoConnect.
     </div>
+
+    <!-- @@author -->
 
    For example, typing `help` and **pressing Enter** will open the [help window](#help-window-help).<br>
    Here are some example _commands_ you can try:
@@ -175,15 +180,17 @@ This is what you will see when you open SoConnect!
 ![Labelled SoConnect](images/demo-screenshots/labelledSoconnectOverview.png)
 
 1. **Menu Bar**
-
+   
+    <!-- @@author Gordon25 -->
    The Menu Bar consists of 2 tabs: `File` and `Help`.
-
+   
    Upon clicking `File`, you can choose to:
     1. **Exit** SoConnect
     2. Open **Calendar** of SoConnect
 
    ![File Tab](images/demo-screenshots/fileTab.png)
-
+    <!-- @@author -->
+   
     <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
     Click the following links to see how to [exit SoConnect](#exiting-soconnect-exit) and [open the calendar](#calendar-window-calendar) using _commands_.
     </div> <br>
@@ -196,9 +203,11 @@ This is what you will see when you open SoConnect!
     </div>
 
 2. **_Command_ Box**
-
+   
+    <!-- @@author Gordon25 -->
    This is where you can type all your _commands_ to use the [features of SoConnect](#features).
-
+    <!-- @@author -->
+   
 3. **Message Box**
 
    This is where the message from SoConnect is displayed after you have executed one _command_.
@@ -239,7 +248,10 @@ Icon | _Field_
 **![Event Icon](images/demo-screenshots/eventIcon.png)** | Linked Events
 **![Tag Icon](images/demo-screenshots/tagIcon.png)** | Tag
 
+<!-- @@author Gordon25 -->
 *The bookmark icon is only visible if the contact has been marked.
+<!-- @@author -->
+
 _See also: [Marking a contact](#marking-a-contact-cmark)_
 
 
@@ -262,7 +274,10 @@ Icon | _Field_
 **![Contact Icon](images/demo-screenshots/contactsIcon.png)** | Linked Contacts
 **![Tag Icon](images/demo-screenshots/tagIcon.png)** | Tag
 
+<!-- @@author Gordon25 -->
 *The bookmark icon is only visible if the event has been marked.
+<!-- @@author -->
+
 _See also: [Marking an event](#marking-an-event-emark)_
 
 --------------------------------------------------------------------------------------------------------------------
@@ -280,6 +295,8 @@ For each feature, you are provided with:
 * Examples of some usages of the feature (All examples use the **initial sample** of contacts and events)
 
 --------------------------------------------------------------------------------------------------------------------
+
+<!-- @@author Gordon25 -->
 
 ### Contact Management
 
@@ -526,6 +543,7 @@ Input | Expected Output
 --------|------------------
 `cview 2` | Shows all details of the second contact of the **currently displayed** in SoConnect **fully**. <br> You should see this message in the message box:<br> `Viewing Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should see this change of your **viewed** contact: ![View Contact](images/demo-screenshots/cviewEx.png)
 
+<!-- @@author -->
 
 ### Event Management
 
@@ -1067,6 +1085,8 @@ _Prefix_ | _Parameter_ Type
 
 ## _Command_ Summary
 
+<!-- @@author Gordon25 -->
+
 **Contact Management**
 
 Action | Format, Examples
@@ -1080,6 +1100,8 @@ Action | Format, Examples
 **[Mark](#marking-a-contact-cmark)** | `cmark INDEX`<br> e.g. `cmark 2`
 **[Remove mark](#removing-mark-of-a-contact-cunmark)** | `cunmark INDEX [INDEX]…`<br> e.g. `cunmark 2` <br> e.g. `cunmark 2 3`
 **[View](#viewing-a-contact-cview)** | `cview INDEX`<br> e.g. `cview 2`
+
+<!-- @@author -->
 
 **Event Management**
 
